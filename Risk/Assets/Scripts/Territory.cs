@@ -11,9 +11,9 @@ using UnityEngine;
 public class Territory : MonoBehaviour
 {   
     private MeshRenderer cubeRenderer;
-    public Material defaultMaterial;
-
+    public Material defaultMaterial;    
     private int placedInfantries;
+    public TerritoryType terr;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class Territory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
     // NB: Hacky, I don't like it
