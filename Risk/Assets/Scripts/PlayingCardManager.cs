@@ -102,8 +102,8 @@ public class PlayingCardManager : MonoBehaviour
         if (infantries.Length == 3)
             idxToTrade = infantries;
         
-        if (infantries.Length > 1 || artilleries.Length > 1
-            || cavarlies.Length > 1) {
+        if (infantries.Length > 0 || artilleries.Length > 0
+            || cavarlies.Length > 0) {
             // pick the first of each if we have one of each design
             idxToTrade.Add(infantries[0]);
             idxToTrade.Add(cavarlies[0]);
