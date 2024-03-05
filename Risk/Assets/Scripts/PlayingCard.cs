@@ -6,7 +6,8 @@ public enum PlayingCardType : int
 {
     INFANTRY = 0,
     CAVALRY,
-    ARTILLARY
+    ARTILLARY,
+    WILDCARD
 }
 
 public class PlayingCard : MonoBehaviour
