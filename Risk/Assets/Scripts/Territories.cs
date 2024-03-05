@@ -40,7 +40,22 @@ public enum TerritoryType: int
     SOUTHERN_EUROPE,
     YAKUTSK,
     SIBERIA,
-    KAMCHATKA
+    KAMCHATKA,
+    IRKUTSK,
+    URAL,
+    JAPAN,
+    MONGOLIA,
+    CHINA,
+    MIDDLE_EAST,
+    INDIA,
+    SIAM,
+    AFGANISTAN,
+    EAST_AFRICA,
+    EGYPT,
+    CONGO,
+    MADAGASCAR,
+    SOUTH_AFRICA,
+    NORTH_AFRICA
 }
 
 public class Territories : MonoBehaviour
