@@ -62,7 +62,7 @@ public class Territories : MonoBehaviour
 {
     public int nTerritories = 46;
     public GameObject territoryPrefab;
-    public Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
+    private Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
             (TerritoryType.ALASKA, new TerritoryType[] {TerritoryType.KAMCHATKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ALBERTA }),
             (TerritoryType.ALBERTA, new TerritoryType[] {TerritoryType.ALASKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ONTARIO,TerritoryType.WESTERN_AMERICA }),
             (TerritoryType.ONTARIO, new TerritoryType[] {TerritoryType.ALBERTA,TerritoryType.QUEBEC,TerritoryType.EASTERN_AMERICA,TerritoryType.WESTERN_AMERICA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.GREENLAND}),
@@ -105,7 +105,16 @@ public class Territories : MonoBehaviour
             (TerritoryType.MADAGASCAR, new TerritoryType[] { TerritoryType.SOUTH_AFRICA,TerritoryType.EAST_AFRICA}),
             (TerritoryType.SOUTH_AFRICA, new TerritoryType[] { TerritoryType.MADAGASCAR,TerritoryType.EAST_AFRICA,TerritoryType.CONGO}),
             (TerritoryType.NORTH_AFRICA, new TerritoryType[] { TerritoryType.WESTERN_EUROPE,TerritoryType.SOUTHERN_EUROPE,TerritoryType.EGYPT,TerritoryType.EAST_AFRICA,TerritoryType.CONGO}),
-    }
+    };
+
+    private Dictionary<string,(TerritoryType[],int)> continents = new Dictionary<string,(TerritoryType[],int)>(){
+        ("s_america", (new TerritoryType[] {TerritoryType.ARGENTINA, TerritoryType.PERU, TerritoryType.BRAZIL, TerritoryType.VENEZUELA}, 3)),
+        ("n_america", (new TerritoryType[] {TerritoryType.CENTRAL_AMERICA, TerritoryType.EASTERN_AMERICA, TerritoryType.WESTERN_AMERICA, TerritoryType.QUEBEC, TerritoryType.ONTARIO, TerritoryType.ALBERTA, TerritoryType.ALASKA, TerritoryType.NORTHWEST_AMERICA, TerritoryType.GREENLAND}, 5)),
+        ("europe", (new TerritoryType[] {TerritoryType.WESTERN_EUROPE, TerritoryType.SOUTHERN_EUROPE, TerritoryType.UKRAINE, TerritoryType.NORTHERN_EUROPE, TerritoryType.SKANDINAVIA, TerritoryType.ICELAND, TerritoryType.GREAT_BRITAIN}, 5)),
+        ("africa", (new TerritoryType[] {TerritoryType.SOUTH_AFRICA, TerritoryType.CONGO, TerritoryType.MADAGASCAR, TerritoryType.EAST_AFRICA, TerritoryType.EGYPT, TerritoryType.NORTH_AFRICA}, 3)),
+        ("asia", (new TerritoryType[] {TerritoryType.MIDDLE_EAST, TerritoryType.INDIA, TerritoryType.SIAM, TerritoryType.CHINA, TerritoryType.AFGANISTAN, TerritoryType.MONGOLIA, TerritoryType.JAPAN, TerritoryType.URAL, TerritoryType.SIBERIA, TerritoryType.IRKUTSK, TerritoryType.YAKUTSK, TerritoryType.KAMCHATKA}, 7)),
+        ("australia", (new TerritoryType[] {TerritoryType.WESTERN_AUSTRALIA, TerritoryType.EASTERN_AUSTRALIA, TerritoryType.PAPUA_NEW_GUINEA, TerritoryType.INDONESIA}, 2))
+    };
 
     private Color[] colours = {
         Color.red,
