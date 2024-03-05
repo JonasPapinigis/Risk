@@ -10,7 +10,7 @@ using UnityEngine;
  */
 public class Territory : MonoBehaviour
 {   
-    private MeshRenderer cubeRenderer;
+    private MeshRenderer renderer;
     public Material defaultMaterial;    
     private int placedInfantries;
     public TerritoryType terr;
@@ -31,12 +31,12 @@ public class Territory : MonoBehaviour
     void EnsureMeshRenderer()
     {
 
-        cubeRenderer = GetComponent<MeshRenderer>();
+        renderer = GetComponent<SpriteRenderer>();
         // we need to ensure that instances have a cube renderer.
         // NB: this is just temporary until individual meshes for each country
         // are added.
-        if (cubeRenderer == null) {
-            cubeRenderer = gameObject.AddComponent<MeshRenderer>();
+        if (renderer == null) {
+            renderer = gameObject.AddComponent<SpriteRenderer>();
             //cubeRenderer.material = defaultMaterial;
         }
     }
@@ -44,6 +44,6 @@ public class Territory : MonoBehaviour
     public void SetColour(Color colour)
     {
         EnsureMeshRenderer();
-        cubeRenderer.material.color = colour;
+        cubeRenderer.color = colour;
     }
 }
