@@ -10,7 +10,7 @@ using UnityEngine;
  */
 public class Territory : MonoBehaviour
 {   
-    private MeshRenderer renderer;
+    private SpriteRenderer renderer;
     public Material defaultMaterial;    
     private int placedInfantries;
     public TerritoryType terr;
@@ -18,7 +18,7 @@ public class Territory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EnsureMeshRenderer();
+        EnsureSpriteRenderer();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Territory : MonoBehaviour
     }
 
     // NB: Hacky, I don't like it
-    void EnsureMeshRenderer()
+    void EnsureSpriteRenderer()
     {
 
         renderer = GetComponent<SpriteRenderer>();
@@ -43,7 +43,7 @@ public class Territory : MonoBehaviour
 
     public void SetColour(Color colour)
     {
-        EnsureMeshRenderer();
+        EnsureSpriteRenderer();
         cubeRenderer.color = colour;
     }
 }
