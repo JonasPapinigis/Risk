@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour
 {
     // list of all players
     public List <Player> players = new List<Player>();
-    // player currently taking their turn
-    public Player currPlayer;
+    // index of player currently taking their turn
+    public int currPlayer;
     // territory manager
     public Territories territoryManager;
+    private bool gameOver;
 
     public Start()
     {
@@ -32,5 +33,24 @@ public class GameManager : MonoBehaviour
         territoryManager = new Territories();
         // we would eventually call this...
         //territoryManager.AssignTerritories(nPlayers);
+
+        // while (!isGameOver()) {
+        //    SelectTurn()
+        //    ...
+        //    ...
+        // }      
+    }
+
+    // increments the player index unless index == players.Count
+    // in which it clips back to zero.
+    public void SelectTurn()
+    {
+        currPlayer++;
+        currPlayer %= players.Count;
+    }
+
+    public bool isGameOver()
+    {
+        return gameOver
     }
 }
