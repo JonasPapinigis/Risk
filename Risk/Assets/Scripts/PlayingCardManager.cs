@@ -42,18 +42,23 @@ public class PlayingCardManager : MonoBehaviour
         // the list of indicies we want to trade in
         List<int> idxToTrade = new List<int>();
 
-        int identicalDesigns = 0;
         bool hasWildcard = false;
         int wildcardIdx = 0;
 
-        TradingCardType prevDesign;
-        // wildcard check
+        List<int> artilleries = new List<int>();
+        List<int> infantries = new List<int>();
+        List<int> cavarlies = new List<int>();
+
         for (int i=0; i<m_deck.Length; i++;) {
             if (hasWildcard)
                 break;
-            if (identicalDesigns == 3)
+            
+            if (cavarlies.Length == 3 || infantries.Length == 3
+                || artilleries.Length == 3)
+                // break if any designs have more than 3
                 break;
 
+            // wildcard check
             if (m_deck[i].design == PlayingCardType.WILDCARD && m_deck.Length >= 3) {
                 hasWildcard = true;
                 // we remove instead of adding it to idxToTrade here as we do not want
@@ -61,32 +66,53 @@ public class PlayingCardManager : MonoBehaviour
                 idxToTrade.add(i);
                 wildcardIdx = i;
             }
-
-            if (m_deck[i].design == prevDesign) {
-                identicalDesigns++;
-                idxToTrade.Add(i);
-
-            prevDesign = m_deck[i].design;
+            
+            switch (m_deck[i].design) {
+                case PlayingCardType.INFANTRY:
+                    infantries.add(m_deck[i])
+                case PlayingCardType.ARTILLARY:
+                    artilleries.add(m_deck[i])
+                case PlayingCardType.CAVALRY:
+                    cavarlies.add(m_deck[i])
+                default:
+                    // wtf?
+            }
         }
-        // we haven't found a set to trade in
-        if (idxToTrade.Length < 3 || !hasWildcard)
-            return null;
 
         // add the two remaining cards
         if (hasWildcard) {
             for (int i=0; i<m_deck.Length; i++) {
                 if (i == wildcardIdx)
+                    // skip over the wildcard as we have it already
                     continue;
                 
                 if (idxToTrade.Length == 3)
+                    // we have our wildcard set
                     break;
 
                 idxToTrade.add(i);
             }
         }
 
-        //if (identicalDesigns == 3)
-            //return true;
+        // check to see if we have 3 of each design
+        if (cavarlies.Length == 3)
+            idxToTrade = cavarlies;
+        if (artilleries.Length == 3)
+            idxToTrade = artilleries;
+        if (infantries.Length == 3)
+            idxToTrade = infantries;
+        
+        if (infantries.Length > 1 || artilleries.Length > 1
+            || cavarlies.Length > 1) {
+            // pick the first of each if we have one of each design
+            idxToTrade.Add(infantries[0]);
+            idxToTrade.Add(cavarlies[0]);
+            idxToTrade.Add(artilleries[0]);
+        }
+        
+        // we haven't found a set to trade in
+        if (idxToTrade.Length < 3 || !hasWildcard)
+            return null;
         
         return idxToTrade;
     }
