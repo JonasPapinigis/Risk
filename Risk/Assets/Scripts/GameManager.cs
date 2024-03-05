@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // list of all players
-    public List <Player> players = new List<Players>();
+    public List <Player> players = new List<Player>();
     // player currently taking their turn
     public Player currPlayer;
     // territory manager
