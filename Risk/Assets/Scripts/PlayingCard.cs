@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collection.Generic;
+using System;
 using UnityEngine;
 
 public enum PlayingCardType : int
@@ -28,9 +27,10 @@ public class PlayingCard : MonoBehaviour
     // Generate a random design and territory to be allocated to the card.
     public void GenerateCard()
     {
-        Random random = new Random();
-        Array terrValues = Enum.GetValues(typeof(TerritoryType));
-        Array designValues = Enum.GetValues(typeof(PlayingCardType));
+        //Static variable below, Fix later
+        System.Random random = new Random();
+        List<TerritoryType> terrValues = Enum.GetValues(typeof(TerritoryType));
+        List<PlayingCardType> designValues = Enum.GetValues(typeof(PlayingCardType));
         design = (PlayingCardType)designValues.GetValue(
             random.Next(designValues.Length));
         territory = (TerritoryType)terrValues.GetValue(

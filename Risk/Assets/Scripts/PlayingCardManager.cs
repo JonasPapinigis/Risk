@@ -19,7 +19,7 @@ public class PlayingCardManager : MonoBehaviour
 
     void AddCard()
     {
-        m_deck.add(new PlayingCard());
+        m_deck.Add(new PlayingCard());
     }
 
     /*
@@ -35,7 +35,7 @@ public class PlayingCardManager : MonoBehaviour
      */
     public List<int> CheckForSet()
     {
-        if (m_deck.Length < 3)
+        if (m_deck.Count < 3)
             // the player has less than 3 trading cards so we cannot check
             return null;
 
@@ -49,17 +49,16 @@ public class PlayingCardManager : MonoBehaviour
         List<int> infantries = new List<int>();
         List<int> cavarlies = new List<int>();
 
-        for (int i=0; i<m_deck.Length; i++;) {
-            if (hasWildcard)
-                break;
+        for (int i=0; i<m_deck.Count; i++) {
+            if (hasWildcard) { break;}
             
-            if (cavarlies.Length == 3 || infantries.Length == 3
-                || artilleries.Length == 3)
+            if (cavarlies.Count == 3 || infantries.Count == 3
+                || artilleries.Count == 3)
                 // break if any designs have more than 3
-                break;
+                { break;};
 
             // wildcard check
-            if (m_deck[i].design == PlayingCardType.WILDCARD && m_deck.Length >= 3) {
+            if (m_deck[i].design == PlayingCardType.WILDCARD && m_deck.Count >= 3) {
                 hasWildcard = true;
                 // we remove instead of adding it to idxToTrade here as we do not want
                 // to accidentally readd the wild card when selecting any two cards.
@@ -69,24 +68,28 @@ public class PlayingCardManager : MonoBehaviour
             
             switch (m_deck[i].design) {
                 case PlayingCardType.INFANTRY:
-                    infantries.add(m_deck[i])
+                    infantries.add(m_deck[i]);
+                    break;
                 case PlayingCardType.ARTILLARY:
-                    artilleries.add(m_deck[i])
+                    artilleries.add(m_deck[i]);
+                    break;
                 case PlayingCardType.CAVALRY:
-                    cavarlies.add(m_deck[i])
+                    cavarlies.add(m_deck[i]);
+                    break;
                 default:
+                    break;
                     // wtf?
             }
         }
 
         // add the two remaining cards
         if (hasWildcard) {
-            for (int i=0; i<m_deck.Length; i++) {
+            for (int i=0; i<m_deck.Count; i++) {
                 if (i == wildcardIdx)
                     // skip over the wildcard as we have it already
                     continue;
                 
-                if (idxToTrade.Length == 3)
+                if (idxToTrade.Count == 3)
                     // we have our wildcard set
                     break;
 
@@ -95,15 +98,15 @@ public class PlayingCardManager : MonoBehaviour
         }
 
         // check to see if we have 3 of each design
-        if (cavarlies.Length == 3)
+        if (cavarlies.Count == 3)
             idxToTrade = cavarlies;
-        if (artilleries.Length == 3)
+        if (artilleries.Count == 3)
             idxToTrade = artilleries;
-        if (infantries.Length == 3)
+        if (infantries.Count == 3)
             idxToTrade = infantries;
         
-        if (infantries.Length > 0 || artilleries.Length > 0
-            || cavarlies.Length > 0) {
+        if (infantries.Count > 0 || artilleries.Count > 0
+            || cavarlies.Count > 0) {
             // pick the first of each if we have one of each design
             idxToTrade.Add(infantries[0]);
             idxToTrade.Add(cavarlies[0]);
@@ -111,7 +114,7 @@ public class PlayingCardManager : MonoBehaviour
         }
         
         // we haven't found a set to trade in
-        if (idxToTrade.Length < 3 || !hasWildcard)
+        if (idxToTrade.Count < 3 || !hasWildcard)
             return null;
         
         return idxToTrade;

@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collection.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -13,24 +13,27 @@ public class GameManager : MonoBehaviour
     public Territories territoryManager;
     private bool gameOver;
 
-    public Start()
+    public void Start()
     {
         // we need a way in some menu to define how many players
         // there are
         Init(3);
     }
 
-    public Update()
+    public void Update()
     {
 
     }
 
     public void Init(int nPlayers)
-    {
+    {   
+        //COMMENTED OUT TILL PLAYER INITIALISATION SOLVED
+        /**
         for (int i=0; i < nPlayers; i++) {
-            players.add(new Player();)
+            players.Add(new Player());
         }
         territoryManager = new Territories();
+        */
         // we would eventually call this...
         //territoryManager.AssignTerritories(nPlayers);
 
@@ -51,6 +54,6 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver()
     {
-        return gameOver
+        return gameOver;
     }
 }

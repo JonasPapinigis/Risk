@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collection.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum Color
@@ -19,13 +19,13 @@ public class Player : MonoBehaviour
     public Color Colour { get; set; }
 
     private List<Territory> territories = new List<Territory>();
-    private List<Card> cards = new List<Card>();
+    private List<PlayingCard> cards = new List<PlayingCard>();
     private int armies;
     private int ownedTerritories; // Tracks the number of territories owned
     private int ownedInfantries; // Tracks the number of infantry units owned
     private PlayingCard[] ownedPlayingCards; // Existing Unity-based property for playing cards
 
-    public Player(int playerId, string name, Color colour)
+    public Player(int playerId=0, string name="", Color colour=Color.Red)
     {
         PlayerId = playerId;
         Name = name;
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     {
         if (territories.Contains(territory) && numberOfArmies <= armies)
         {
-            territory.Armies += numberOfArmies;
+            territory.armies += numberOfArmies;
             armies -= numberOfArmies;
             ownedInfantries += numberOfArmies; // Update the ownedInfantries counter
         }

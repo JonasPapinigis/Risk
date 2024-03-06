@@ -12,7 +12,7 @@ public class Territory : MonoBehaviour
 {   
     private SpriteRenderer renderer;
     public Material defaultMaterial;    
-    private int placedInfantries;
+    public int armies;
     public TerritoryType terr;
 
     // Start is called before the first frame update
@@ -41,9 +41,4 @@ public class Territory : MonoBehaviour
         }
     }
 
-    public void SetColour(Color colour)
-    {
-        EnsureSpriteRenderer();
-        cubeRenderer.color = colour;
-    }
 }
