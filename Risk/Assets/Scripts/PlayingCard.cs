@@ -28,7 +28,7 @@ public class PlayingCard : MonoBehaviour
     public void GenerateCard()
     {
         //Static variable below, Fix later
-        System.Random random = new Random();
+        System.Random random = new System.Random();
         List<TerritoryType> terrValues = Enum.GetValues(typeof(TerritoryType));
         List<PlayingCardType> designValues = Enum.GetValues(typeof(PlayingCardType));
         design = (PlayingCardType)designValues.GetValue(

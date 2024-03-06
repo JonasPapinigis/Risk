@@ -14,6 +14,7 @@ public class Territory : MonoBehaviour
     public Material defaultMaterial;    
     public int armies;
     public TerritoryType terr;
+    public Player owner;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,10 @@ public class Territory : MonoBehaviour
             renderer = gameObject.AddComponent<SpriteRenderer>();
             //cubeRenderer.material = defaultMaterial;
         }
+    }
+
+    void setOwner(Player player){
+        owner = player;
     }
 
 }
