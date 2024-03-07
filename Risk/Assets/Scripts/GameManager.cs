@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this is a quick fix but we Unity has its own random interface and we have been using
+// System.Random for this project. this is just a alias that changes Random() to be
+// System.Random instead of UnityEngine.Random.
+// https://docs.unity3d.com/ScriptReference/Random.html
+using Random = System.Random;
 
 public class GameManager : MonoBehaviour
 {
