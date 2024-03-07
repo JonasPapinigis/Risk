@@ -62,19 +62,19 @@ public class PlayingCardManager : MonoBehaviour
                 hasWildcard = true;
                 // we remove instead of adding it to idxToTrade here as we do not want
                 // to accidentally readd the wild card when selecting any two cards.
-                idxToTrade.add(i);
+                idxToTrade.Add(i);
                 wildcardIdx = i;
             }
             
             switch (m_deck[i].design) {
                 case PlayingCardType.INFANTRY:
-                    infantries.add(m_deck[i]);
+                    infantries.Add(i);
                     break;
                 case PlayingCardType.ARTILLARY:
-                    artilleries.add(m_deck[i]);
+                    artilleries.Add(i);
                     break;
                 case PlayingCardType.CAVALRY:
-                    cavarlies.add(m_deck[i]);
+                    cavarlies.Add(i);
                     break;
                 default:
                     break;
@@ -93,7 +93,7 @@ public class PlayingCardManager : MonoBehaviour
                     // we have our wildcard set
                     break;
 
-                idxToTrade.add(i);
+                idxToTrade.Add(i);
             }
         }
 
