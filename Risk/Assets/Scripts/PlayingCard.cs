@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayingCardType : int
@@ -29,11 +30,11 @@ public class PlayingCard : MonoBehaviour
     {
         //Static variable below, Fix later
         System.Random random = new System.Random();
-        List<TerritoryType> terrValues = Enum.GetValues(typeof(TerritoryType));
-        List<PlayingCardType> designValues = Enum.GetValues(typeof(PlayingCardType));
+        Array terrValues = Enum.GetValues(typeof(TerritoryType));
+        Array designValues = Enum.GetValues(typeof(PlayingCardType));
         design = (PlayingCardType)designValues.GetValue(
-            random.Next(designValues.Length));
+            random.Next(designValues.Length-1));
         territory = (TerritoryType)terrValues.GetValue(
-            random.Next(terrValues.Length));
+            random.Next(terrValues.Length-1));
     }
 }
