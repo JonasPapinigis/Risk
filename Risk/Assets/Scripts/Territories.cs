@@ -117,13 +117,13 @@ public class Territories : MonoBehaviour
     };
 
     private Color[] colours = {
-        Color.red,
-        Color.blue,
-        Color.green,
+        Color.Red,
+        Color.Blue,
+        Color.Green,
         new Color(1f, 0.5f, 0f),
         new Color(0.5f, 0f, 0.5f),
-        Color.yellow,
-        Color.white
+        Color.Yellow,
+        Color.White
     };
 
     // Start is called before the first frame update
