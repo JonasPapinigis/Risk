@@ -116,14 +116,14 @@ public class Territories : MonoBehaviour
         ("australia", (new TerritoryType[] {TerritoryType.WESTERN_AUSTRALIA, TerritoryType.EASTERN_AUSTRALIA, TerritoryType.PAPUA_NEW_GUINEA, TerritoryType.INDONESIA}, 2))
     };
 
-    private Color[] colours = {
-        Color.Red,
-        Color.Blue,
-        Color.Green,
-        new Color(1f, 0.5f, 0f),
-        new Color(0.5f, 0f, 0.5f),
-        Color.Yellow,
-        Color.White
+    private UnityEngine.Color[] colours = {
+        UnityEngine.Color.red,
+        UnityEngine.Color.blue,
+        UnityEngine.Color.green,
+        new UnityEngine.Color(1f, 0.5f, 0f),
+        new UnityEngine.Color(0.5f, 0f, 0.5f),
+        UnityEngine.Color.yellow,
+        UnityEngine.Color.white
     };
 
     // Start is called before the first frame update
@@ -155,7 +155,7 @@ public class Territories : MonoBehaviour
         }
     }
 
-    Color GetRandomColor()
+    UnityEngine.Color GetRandomColor()
     {
         int randomIndex = Random.Range(0, colours.Length);
         return colours[randomIndex];
