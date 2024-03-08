@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 439b3bd7f223e0445a3ffd518d18e62e
+guid: 7593a8fff443e6b4fa32275dc8126d53
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: europe_0
+      name: australia_0
       rect:
         serializedVersion: 2
-        x: 562
-        y: 902
-        width: 158
-        height: 107
+        x: 74
+        y: 692
+        width: 481
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cdf3de9e03676c4da028606d1323bc6
-      internalID: 385267595
+      spriteID: f9e827eff4797c04599680ad15d2f49c
+      internalID: 2032245428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_1
+      name: australia_1
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 494
+        x: 340
+        y: 891
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f094dc167dba5d4fbecd567adb64f11
+      internalID: -541095603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: australia_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 821
+        width: 9
+        height: 38
+      alignment: 9
+      pivot: {x: 0.66544497, y: 0.49273264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2abe4347df3c514b882ac3a2efdb383
+      internalID: -1186346634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: australia_3
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 748
+        width: 372
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6906dc7c83432634481873d9d2ca71b2
+      internalID: -1669535025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: australia_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 723
+        width: 2
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fd27164ca71554bba1ec66b8dd2f2a
+      internalID: 2099349110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: australia_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 98
+        width: 520
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cf11714ffe0e84dab7d54b7927e61c
+      internalID: 1490337507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: australia_6
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 63
         width: 438
-        height: 559
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,134 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4299907f0d2f0f841ae7def317187c00
-      internalID: 298958944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_2
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 566
-        width: 80
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61523d43d4799714a869c90e2f49ba10
-      internalID: -491791253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_3
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 537
-        width: 214
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72a9441fd378b404cb9ff7abffadeb70
-      internalID: -464363659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_4
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 480
-        width: 270
-        height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 195b5b6fa9571cd46872df8e629723f7
-      internalID: 1248079199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_5
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 272
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89eaa5a645f14fe40885a59356804dbc
-      internalID: -1008982231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_6
-      rect:
-        serializedVersion: 2
-        x: 1067
-        y: 88
-        width: 230
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cff426aadd515f409d1e99b120d10d4
-      internalID: -1652478498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_7
-      rect:
-        serializedVersion: 2
-        x: 1532
-        y: 60
-        width: 270
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f563b6a6d475ae439891e432f1f0574
-      internalID: -665818434
+      spriteID: 8e8f001090bf7fd43bbd30d75437b5de
+      internalID: 2085047971
       vertices: []
       indices: 
       edges: []
@@ -288,14 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      europe_0: 385267595
-      europe_1: 298958944
-      europe_2: -491791253
-      europe_3: -464363659
-      europe_4: 1248079199
-      europe_5: -1008982231
-      europe_6: -1652478498
-      europe_7: -665818434
+      australia_0: 2032245428
+      australia_1: -541095603
+      australia_2: -1186346634
+      australia_3: -1669535025
+      australia_4: 2099349110
+      australia_5: 1490337507
+      australia_6: 2085047971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 439b3bd7f223e0445a3ffd518d18e62e
+guid: 440e78c62e9875a428f01f58e7ab9dd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: europe_0
+      name: south america_0
       rect:
         serializedVersion: 2
-        x: 562
-        y: 902
-        width: 158
-        height: 107
+        x: 259
+        y: 774
+        width: 443
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cdf3de9e03676c4da028606d1323bc6
-      internalID: 385267595
+      spriteID: ab155d1a658b1fd49977062f700a6526
+      internalID: 2047973998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_1
+      name: south america_1
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 494
-        width: 438
-        height: 559
+        x: 1264
+        y: 519
+        width: 612
+        height: 509
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4299907f0d2f0f841ae7def317187c00
-      internalID: 298958944
+      spriteID: 7a3e9df97a62beb478d388effcb8e55b
+      internalID: 1282839904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_2
+      name: south america_2
       rect:
         serializedVersion: 2
-        x: 287
-        y: 566
-        width: 80
-        height: 98
+        x: 128
+        y: 155
+        width: 430
+        height: 385
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61523d43d4799714a869c90e2f49ba10
-      internalID: -491791253
+      spriteID: 6466c81ce975dac40a386908e08c5a1f
+      internalID: -501706818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_3
+      name: south america_3
       rect:
         serializedVersion: 2
-        x: 286
-        y: 537
-        width: 214
-        height: 231
+        x: 879
+        y: 138
+        width: 318
+        height: 555
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,92 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a9441fd378b404cb9ff7abffadeb70
-      internalID: -464363659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_4
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 480
-        width: 270
-        height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 195b5b6fa9571cd46872df8e629723f7
-      internalID: 1248079199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_5
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 272
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89eaa5a645f14fe40885a59356804dbc
-      internalID: -1008982231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_6
-      rect:
-        serializedVersion: 2
-        x: 1067
-        y: 88
-        width: 230
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cff426aadd515f409d1e99b120d10d4
-      internalID: -1652478498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_7
-      rect:
-        serializedVersion: 2
-        x: 1532
-        y: 60
-        width: 270
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f563b6a6d475ae439891e432f1f0574
-      internalID: -665818434
+      spriteID: 9eb1b3ab876149c4da2cb397726e5218
+      internalID: 1366996531
       vertices: []
       indices: 
       edges: []
@@ -288,14 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      europe_0: 385267595
-      europe_1: 298958944
-      europe_2: -491791253
-      europe_3: -464363659
-      europe_4: 1248079199
-      europe_5: -1008982231
-      europe_6: -1652478498
-      europe_7: -665818434
+      south america_0: 2047973998
+      south america_1: 1282839904
+      south america_2: -501706818
+      south america_3: 1366996531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

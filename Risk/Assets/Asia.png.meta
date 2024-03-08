@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 439b3bd7f223e0445a3ffd518d18e62e
+guid: 9c9d14aa773c29342b09c8a9cd359d3d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: europe_0
+      name: Asia_0
       rect:
         serializedVersion: 2
-        x: 562
-        y: 902
-        width: 158
-        height: 107
+        x: 59
+        y: 624
+        width: 253
+        height: 451
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cdf3de9e03676c4da028606d1323bc6
-      internalID: 385267595
+      spriteID: bcf1ba92cb5fbdb4ca5d35ec0e64de2f
+      internalID: 515645151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_1
+      name: Asia_1
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 494
-        width: 438
-        height: 559
+        x: 382
+        y: 755
+        width: 170
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4299907f0d2f0f841ae7def317187c00
-      internalID: 298958944
+      spriteID: d9d2a32a5ce278941abe25bc228d7fca
+      internalID: 1407560683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_2
+      name: Asia_2
       rect:
         serializedVersion: 2
-        x: 287
-        y: 566
-        width: 80
-        height: 98
+        x: 647
+        y: 518
+        width: 346
+        height: 517
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61523d43d4799714a869c90e2f49ba10
-      internalID: -491791253
+      spriteID: 65dcff7b662ef034b8eca6bd5600f52e
+      internalID: -1276506926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_3
+      name: Asia_3
       rect:
         serializedVersion: 2
-        x: 286
-        y: 537
-        width: 214
-        height: 231
+        x: 1087
+        y: 776
+        width: 288
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a9441fd378b404cb9ff7abffadeb70
-      internalID: -464363659
+      spriteID: de42b2e7276016943ac0ed064cb994ea
+      internalID: -1581225944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_4
+      name: Asia_4
       rect:
         serializedVersion: 2
-        x: 755
-        y: 480
-        width: 270
-        height: 261
+        x: 1471
+        y: 651
+        width: 414
+        height: 429
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 195b5b6fa9571cd46872df8e629723f7
-      internalID: 1248079199
+      spriteID: 9ea24bb08c44e384d9837cbbe144da28
+      internalID: -1710517366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_5
+      name: Asia_5
       rect:
         serializedVersion: 2
-        x: 448
-        y: 112
-        width: 272
-        height: 236
+        x: 312
+        y: 451
+        width: 334
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89eaa5a645f14fe40885a59356804dbc
-      internalID: -1008982231
+      spriteID: 9c586cc1f73843944be12384ea796d41
+      internalID: 2099395792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_6
+      name: Asia_6
       rect:
         serializedVersion: 2
-        x: 1067
-        y: 88
-        width: 230
-        height: 285
+        x: 559
+        y: 29
+        width: 351
+        height: 425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cff426aadd515f409d1e99b120d10d4
-      internalID: -1652478498
+      spriteID: f35719f5e8d9e86479832e12e47c8bdb
+      internalID: 1983667704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: europe_7
+      name: Asia_7
       rect:
         serializedVersion: 2
-        x: 1532
-        y: 60
-        width: 270
+        x: 1023
+        y: 411
+        width: 354
         height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +271,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f563b6a6d475ae439891e432f1f0574
-      internalID: -665818434
+      spriteID: 557b709e2924cca4e83ffee1c0835473
+      internalID: 2097736409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asia_8
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 404
+        width: 323
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4575f71e9c28f4b8c021bef9baa266
+      internalID: -1132509940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asia_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 27
+        width: 455
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e146d8d5e0d797949b155484364ac09f
+      internalID: 65267198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asia_10
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 52
+        width: 229
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d478263d6dbc78442a8ce4d7f34e5b28
+      internalID: 219588066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asia_11
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 22
+        width: 474
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51984da686652ed47b036b940c5e6984
+      internalID: -416644438
       vertices: []
       indices: 
       edges: []
@@ -288,14 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      europe_0: 385267595
-      europe_1: 298958944
-      europe_2: -491791253
-      europe_3: -464363659
-      europe_4: 1248079199
-      europe_5: -1008982231
-      europe_6: -1652478498
-      europe_7: -665818434
+      Asia_0: 515645151
+      Asia_1: 1407560683
+      Asia_10: 219588066
+      Asia_11: -416644438
+      Asia_2: -1276506926
+      Asia_3: -1581225944
+      Asia_4: -1710517366
+      Asia_5: 2099395792
+      Asia_6: 1983667704
+      Asia_7: 2097736409
+      Asia_8: -1132509940
+      Asia_9: 65267198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
