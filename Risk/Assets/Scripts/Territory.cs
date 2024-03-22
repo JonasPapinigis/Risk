@@ -12,14 +12,13 @@ public class Territory : MonoBehaviour
 {   
     private SpriteRenderer renderer;
     public Material defaultMaterial;    
-    public int armies;
+    public int armies = 1;
     public TerritoryType terr;
     public Player owner;
 
     // Start is called before the first frame update
     void Start()
     {
-        EnsureSpriteRenderer();
     }
 
     // Update is called once per frame
@@ -45,5 +44,7 @@ public class Territory : MonoBehaviour
     void setOwner(Player player){
         owner = player;
     }
+
+    void SetColour(){}
 
 }

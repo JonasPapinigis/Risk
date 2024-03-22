@@ -140,19 +140,7 @@ public class Territories : MonoBehaviour
 
     void GenerateTerritories()
     {
-        for (int i=0; i<nTerritories; i++) {
-            GameObject territoryObject = Instantiate(
-                territoryPrefab,
-                new Vector3(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f)), // Randomize position
-                Quaternion.identity);
-            Territory territory = territoryObject.GetComponent<Territory>();
-
-            
-            if (territory != null)
-                territory.SetColour(GetRandomColor());
-            else
-                Debug.Log("BAAAHAA");
-        }
+        
     }
 
     UnityEngine.Color GetRandomColor()
