@@ -52,10 +52,12 @@ public class GameManager : MonoBehaviour
 
     // increments the player index unless index == players.Count
     // in which it clips back to zero.
-    public void SelectTurn()
+    // returns the player who is next to take their turn.
+    public Player SelectTurn()
     {
         currPlayer++;
         currPlayer %= players.Count;
+        return players[currPlayer];
     }
 
     public bool isGameOver()
