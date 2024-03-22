@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private int ownedInfantries; // Tracks the number of infantry units owned
     private PlayingCard[] ownedPlayingCards; // Existing Unity-based property for playing cards
 
-    public Player(int playerId=0, string name="", PlrColour colour=PlrColour.Red)
+    public Player(string name="", PlrColour colour=PlrColour.Red)
     {
         Name = name;
         Colour = colour;
