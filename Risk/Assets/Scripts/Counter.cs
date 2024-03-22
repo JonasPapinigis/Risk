@@ -8,8 +8,8 @@ public class TextUpdater: MonoBehaviour
 {
   public TMP_Text messageText;
 
-  void Update() // Or other method
+  void Start() // Or other method
   {
-    messageText.SetText("New message");
+    messageText.SetText("3");
   }
 }
