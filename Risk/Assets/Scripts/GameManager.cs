@@ -123,4 +123,26 @@ public class GameManager : MonoBehaviour
     bool success = defenderLosses > attackerLosses;
     return (success, attackerLosses, defenderLosses);
     }
+    private void AddPlayers()
+    {
+        if (currPlayer > 6) {
+            Debug.Log("Maximum players exceeded. Game session has not "
+                      "been created. Players: " + currPlayer);
+            return;
+        }
+        if (currPlayer < 2) {
+            Debug.Log("Not enough players for a valid game session. Game "
+            "session has not been created. Players: " + currPlayer);
+            return;
+        }
+
+        for (int i=0; i<currPlayer; i++) {
+            // get the color based on the player index.
+            // e.g. i=0 means color=Color.Red
+            PlayerColor color = (PlayerColor)i;
+            // TODO: player name
+
+            players.Add(new Player("", color));
+        }
+    }
 }
