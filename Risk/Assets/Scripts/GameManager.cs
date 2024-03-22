@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+
 using UnityEngine;
 
 // this is a quick fix but we Unity has its own random interface and we have been using
@@ -15,49 +16,56 @@ public class GameManager : MonoBehaviour
     public List <Player> players = new List<Player>();
     // index of player currently taking their turn
     public int currPlayer;
+    private int activePlayer;
     // territory manager
     public Territories territoryManager;
     private bool gameOver;
+    private bool timerAcitive; private float timer = 0.0f;
+    private bool nextPressed;
+
+
 
     public void Start()
     {
-        // we need a way in some menu to define how many players
-        // there are
-        Init(3);
+        
+        InitialisePlayers(currPlayers);
+        InitialiseTerritories();
+        RunGame();
     }
 
     public void Update()
     {
-
+        if (timerActivate){
+            timer += deltaTime;
+            if (timer <= 180f){
+                timer = 0f;
+                timerActive = false;
+            }
+        }
     }
 
-    public void Init(int nPlayers)
+    public bool InitialisePlayers(int nPlayers)
     {   
-        //COMMENTED OUT TILL PLAYER INITIALISATION SOLVED
-        /**
-        for (int i=0; i < nPlayers; i++) {
-            players.Add(new Player());
+        
+    }
+    public bool InitialiseTerritories() {
+        return true;
+    }
+    public bool RunGame(){
+        bool running = true;
+        while true{
+            
         }
-        territoryManager = new Territories();
-        */
-        // we would eventually call this...
-        //territoryManager.AssignTerritories(nPlayers);
-
-        // while (!isGameOver()) {
-        //    SelectTurn()
-        //    ...
-        //    ...
-        // }      
+        return running;
     }
 
     // increments the player index unless index == players.Count
     // in which it clips back to zero.
-    // returns the player who is next to take their turn.
-    public Player SelectTurn()
+    public void SelectTurn()
     {
-        currPlayer++;
-        currPlayer %= players.Count;
-        return players[currPlayer];
+        activePlayer++;
+        activePlayer %= players.Count;
+        return players[activePlayer]
     }
 
     public bool isGameOver()
@@ -118,9 +126,56 @@ public class GameManager : MonoBehaviour
             } else {
                 attackerLosses++; // Defender wins or ties this comparison
             }
+    }
+
+    public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
+        if (terr.owner != players[activePlayer]){
+            throw new ArguementException("Cannot Deploy on other players' territories");
+        }
+        if (numTroops > total){
+            throw new ArguementException("Cannot Deploy more troops than you have available");
         }
 
-    bool success = defenderLosses > attackerLosses;
-    return (success, attackerLosses, defenderLosses);
+        terrTroops = terr.armies + numTroops;
+        return terrTroops;
+        
+    }
+
+    public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
+        plr = players[activePlayer];
+        if (terrFrom.owner != plr && terrTarget.owner != plr){
+            throw new ArguementException("Cannot target unowned territories");
+        }
+        if (terrFrom.armies <= num){
+            throw new ArguementException("Insufficient troops on territory");
+        }
+
+        return terrmFrom.armies - num, troopsTarget + num;
+
+    }
+
+    public (new)
+    
+    }
+
+    //TODO; 
+    private int calcTroops(){
+        Player plr = players[activePlayer];
+    }
+
+    public bool turn(){
+        #Initialise timer
+        Player plr = players[activePlayer];
+        timerActive = true;
+        while (timerActive){
+            #Deploy until there are no troops or cancelled
+            int toDeploy = calcTroops();
+            while(toDeploy > 0){
+                toDeploy = 
+            }
+            #Attack until time runs our or cancelled
+            #Fortify once or until time runs out
+        }
+
     }
 }
