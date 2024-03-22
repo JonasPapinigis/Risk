@@ -126,13 +126,11 @@ public class GameManager : MonoBehaviour
     private void AddPlayers()
     {
         if (currPlayer > 6) {
-            Debug.Log("Maximum players exceeded. Game session has not "
-                      "been created. Players: " + currPlayer);
+            Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayer);
             return;
         }
         if (currPlayer < 2) {
-            Debug.Log("Not enough players for a valid game session. Game "
-            "session has not been created. Players: " + currPlayer);
+            Debug.Log("Not enough players for a valid game session. Game session has not been created. Players: " + currPlayer);
             return;
         }
 
