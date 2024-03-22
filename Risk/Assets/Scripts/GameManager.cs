@@ -180,16 +180,16 @@ public class GameManager : MonoBehaviour
     }
     private void AddPlayers()
     {
-        if (currPlayer > 6) {
-            Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayer);
+        if (currPlayers > 6) {
+            Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayers);
             return;
         }
-        if (currPlayer < 2) {
-            Debug.Log("Not enough players for a valid game session. Game session has not been created. Players: " + currPlayer);
+        if (currPlayers < 2) {
+            Debug.Log("Not enough players for a valid game session. Game session has not been created. Players: " + currPlayers);
             return;
         }
 
-        for (int i=0; i<currPlayer; i++) {
+        for (int i=0; i<currPlayers; i++) {
             // get the color based on the player index.
             // e.g. i=0 means color=Color.Red
             PlayerColor color = (PlayerColor)i;
