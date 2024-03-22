@@ -15,12 +15,12 @@ public class GameManager : MonoBehaviour
     // list of all players
     public List <Player> players = new List<Player>();
     // index of player currently taking their turn
-    public int currPlayer;
+    public int currPlayers;
     private int activePlayer;
     // territory manager
     public Territories territoryManager;
     private bool gameOver;
-    private bool timerAcitive; private float timer = 0.0f;
+    private bool timerActive; private float timer = 0.0f;
     private bool nextPressed;
 
 
@@ -31,12 +31,13 @@ public class GameManager : MonoBehaviour
         InitialisePlayers(currPlayers);
         InitialiseTerritories();
         RunGame();
+
     }
 
     public void Update()
     {
-        if (timerActivate){
-            timer += deltaTime;
+        if (timerActive){
+            timer += Time.deltaTime;
             if (timer <= 180f){
                 timer = 0f;
                 timerActive = false;
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
     }
     public bool RunGame(){
         bool running = true;
-        while true{
+        while (true){
             
         }
         return running;
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
     {
         activePlayer++;
         activePlayer %= players.Count;
-        return players[activePlayer]
+        return players[activePlayer];
     }
 
     public bool isGameOver()
@@ -127,6 +128,7 @@ public class GameManager : MonoBehaviour
                 attackerLosses++; // Defender wins or ties this comparison
             }
     }
+    }   
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
         if (terr.owner != players[activePlayer]){
@@ -139,10 +141,11 @@ public class GameManager : MonoBehaviour
         terrTroops = terr.armies + numTroops;
         return terrTroops;
         
+        
     }
 
     public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
-        plr = players[activePlayer];
+        Player plr = players[activePlayer];
         if (terrFrom.owner != plr && terrTarget.owner != plr){
             throw new ArguementException("Cannot target unowned territories");
         }
@@ -150,13 +153,10 @@ public class GameManager : MonoBehaviour
             throw new ArguementException("Insufficient troops on territory");
         }
 
-        return terrmFrom.armies - num, troopsTarget + num;
+        return (terrmFrom.armies - num, troopsTarget + num);
 
     }
-
-    public (new)
     
-    }
 
     //TODO; 
     private int calcTroops(){
@@ -164,17 +164,17 @@ public class GameManager : MonoBehaviour
     }
 
     public bool turn(){
-        #Initialise timer
+        //Initialise timer
         Player plr = players[activePlayer];
         timerActive = true;
         while (timerActive){
-            #Deploy until there are no troops or cancelled
+            //Deploy until there are no troops or cancelled
             int toDeploy = calcTroops();
             while(toDeploy > 0){
-                toDeploy = 
+                //toDeploy = 
             }
-            #Attack until time runs our or cancelled
-            #Fortify once or until time runs out
+            //Attack until time runs our or cancelled
+            //Fortify once or until time runs out
         }
 
     }
