@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlrColour
+public enum PlayerColor
 {
     Red,
     Blue,
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 {
 
     public string Name { get; set; }
-    public PlrColour colour { get; set; }
+    public PlayerColor colour { get; set; }
 
     private List<Territory> territories = new List<Territory>();
     private List<PlayingCard> cards = new List<PlayingCard>();
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private int ownedInfantries; // Tracks the number of infantry units owned
     private PlayingCard[] ownedPlayingCards; // Existing Unity-based property for playing cards
 
-    public Player(string name="", PlrColour colour=PlrColour.Red)
+    public Player(string name="", PlayerColor colour=PlayerColor.Red)
     {
         Name = name;
         Colour = colour;
