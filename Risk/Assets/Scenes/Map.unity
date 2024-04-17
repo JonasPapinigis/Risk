@@ -171,7 +171,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 25
-  owner: {fileID: 0}
 --- !u!212 &13215595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -544,7 +543,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 28
-  owner: {fileID: 0}
 --- !u!212 &43064528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,6 +606,7 @@ GameObject:
   - component: {fileID: 49218783}
   - component: {fileID: 49218782}
   - component: {fileID: 49218781}
+  - component: {fileID: 49218784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -689,6 +688,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &49218784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49218780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38749ad7aaefcf747a1336d8812798ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currPlayers: 0
+  territoryManager: {fileID: 0}
 --- !u!1 &70221604
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +750,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 29
-  owner: {fileID: 0}
 --- !u!212 &70221607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -838,7 +850,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 27
-  owner: {fileID: 0}
 --- !u!212 &79303339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -939,7 +950,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 36
-  owner: {fileID: 0}
 --- !u!212 &96499726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1213,7 +1223,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 37
-  owner: {fileID: 0}
 --- !u!212 &199724374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1366,7 +1375,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 12
-  owner: {fileID: 0}
 --- !u!1 &230999546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1596,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 15
-  owner: {fileID: 0}
 --- !u!212 &242423810
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1741,7 +1748,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 2
-  owner: {fileID: 0}
 --- !u!1 &384115655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1848,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 7
-  owner: {fileID: 0}
 --- !u!1 &396117440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2304,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 17
-  owner: {fileID: 0}
 --- !u!212 &456424273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2536,7 +2540,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 26
-  owner: {fileID: 0}
 --- !u!212 &506734180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2637,7 +2640,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 32
-  owner: {fileID: 0}
 --- !u!212 &538394737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2738,7 +2740,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 13
-  owner: {fileID: 0}
 --- !u!212 &579719526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3206,7 +3207,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 5
-  owner: {fileID: 0}
 --- !u!1 &738170235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,7 +3255,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 30
-  owner: {fileID: 0}
 --- !u!212 &738170238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3356,7 +3355,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 14
-  owner: {fileID: 0}
 --- !u!212 &750184035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3821,7 +3819,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 9
-  owner: {fileID: 0}
 --- !u!1 &1024869129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,7 +3867,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 16
-  owner: {fileID: 0}
 --- !u!212 &1024869132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4023,7 +4019,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 10
-  owner: {fileID: 0}
 --- !u!1 &1106865390
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,7 +4067,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 41
-  owner: {fileID: 0}
 --- !u!212 &1106865393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4225,7 +4219,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 11
-  owner: {fileID: 0}
 --- !u!1 &1151718200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,7 +4267,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 21
-  owner: {fileID: 0}
 --- !u!212 &1151718203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4427,7 +4419,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 3
-  owner: {fileID: 0}
 --- !u!1 &1212913752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,7 +4519,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 8
-  owner: {fileID: 0}
 --- !u!1 &1263053868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +4567,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 39
-  owner: {fileID: 0}
 --- !u!212 &1263053871
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4814,7 +4803,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 38
-  owner: {fileID: 0}
 --- !u!212 &1296762860
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4953,7 +4941,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 34
-  owner: {fileID: 0}
 --- !u!212 &1395418778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5484,7 +5471,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 6
-  owner: {fileID: 0}
 --- !u!1 &1653442306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5568,7 +5554,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 31
-  owner: {fileID: 0}
 --- !u!212 &1725930459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5669,7 +5654,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 35
-  owner: {fileID: 0}
 --- !u!212 &1733641994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5906,7 +5890,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 22
-  owner: {fileID: 0}
 --- !u!212 &1768135607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6007,7 +5990,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 24
-  owner: {fileID: 0}
 --- !u!212 &1774582120
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6160,7 +6142,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 1
-  owner: {fileID: 0}
 --- !u!1 &1829692822
 GameObject:
   m_ObjectHideFlags: 0
@@ -6209,7 +6190,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 23
-  owner: {fileID: 0}
 --- !u!212 &1829692825
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6310,7 +6290,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 33
-  owner: {fileID: 0}
 --- !u!212 &1839749207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6547,7 +6526,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 20
-  owner: {fileID: 0}
 --- !u!212 &1862263585
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6975,7 +6953,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 4
-  owner: {fileID: 0}
 --- !u!1 &1910654723
 GameObject:
   m_ObjectHideFlags: 0
@@ -7024,7 +7001,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 19
-  owner: {fileID: 0}
 --- !u!212 &1910654726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7180,7 +7156,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 0
-  owner: {fileID: 0}
 --- !u!61 &1920007268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7324,7 +7299,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 18
-  owner: {fileID: 0}
 --- !u!212 &1950849624
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7425,7 +7399,6 @@ MonoBehaviour:
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 40
-  owner: {fileID: 0}
 --- !u!212 &1983351912
 SpriteRenderer:
   m_ObjectHideFlags: 0

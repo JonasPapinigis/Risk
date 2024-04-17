@@ -41,13 +41,13 @@ public class Territory : MonoBehaviour
         }
     }
 
-    void setOwner(Player player){
+    public void setOwner(Player player){
         owner = player;
     }
 
-    void SetColour(){}
+    public void setColour(){}
 
-    void SetType(TerritoryType type){
+    public void setType(TerritoryType type){
         terr = type;
     }
 }

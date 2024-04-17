@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
     private int calcTroops(Player owner){
         int terrOwned = 0;
         foreach ((Territory t, Player p) tuple in territoryManager.ownerList){
-            if (p == owner){
+            if (tuple.Item2 == owner){
                 terrOwned++;
             }
         }
@@ -205,10 +205,6 @@ public class GameManager : MonoBehaviour
         Player plr = SelectTurn();
         while (timerActive){
             //Deploy until there are no troops or cancelled
-            int toDeploy = calcTroops();
-            while(toDeploy > 0){
-                //toDeploy = 
-            }
             //Attack until time runs our or cancelled
             //Fortify once or until time runs out
         }
