@@ -143,7 +143,6 @@ public class Territories : MonoBehaviour
     {   
         ownerList = new List<(Player,Territory)>();
         Queue<Player> queue = new Queue<Player>();
-        Random rand = new Random();
         foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType))){
             Player playerUsed = queue.Dequeue();
             Player playerUsed = queue.Dequeue();
