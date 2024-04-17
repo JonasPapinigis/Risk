@@ -191,6 +191,7 @@ public class GameManager : MonoBehaviour
     {
         timeElapsed++;
         Debug.Log("Turn timer increment event.");
+        return Task.CompletedTask;
     }
 
     public IEnumerator turn()
