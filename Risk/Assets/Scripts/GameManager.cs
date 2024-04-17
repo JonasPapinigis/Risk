@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private bool nextPressed;
 
     // timer stuff  
-    Timer turnTimer = new Timer(1000) // ms
+    Timer turnTimer = new Timer(1000); // ms
     int timeElapsed = 0;
 
 
