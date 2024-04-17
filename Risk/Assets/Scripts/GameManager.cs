@@ -144,8 +144,8 @@ public class GameManager : MonoBehaviour
                 attackerLosses++; // Defender wins or ties this comparison
             }
         }
-        if (attLosses > defenderLosses){
-            return (true,attLosses,defenderLosses);
+        if (attackerLosses > defenderLosses){
+            return (true,attackerLosses,defenderLosses);
         }
         return (false,attLosses,defenderLosses);
     }   
