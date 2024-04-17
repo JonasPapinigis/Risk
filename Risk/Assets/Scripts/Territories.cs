@@ -14,7 +14,7 @@ public enum TerritoryColour : int
 
 public enum TerritoryType: int
 {
-    ALASKA = 0,
+    ALASKA,
     ALBERTA,
     ONTARIO,
     WESTERN_AMERICA,
@@ -139,21 +139,26 @@ public class Territories : MonoBehaviour
         
     }
 
-     GenerateTerritories(List<Players> players)
+    bool GenerateTerritories(List<Players> players)
     {   
         ownerList = new List<(Player,Territory)>();
-        Queue<Player> queue = new Queue<>();
-        foreach (type in TerritoryType){
-            playerUsed = queue.Dequeue();
+        Queue<Player> queue = new Queue<Player>();
+        Random rand = new Random();
+        foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType))){
+            Player playerUsed = queue.Dequeue()
             Territory country = new Territory();
-            Random rand = new Random()
+            
 
             country.setOwner(playerUsed);
             country.setType(type);
-            country.armeis += rand.Next(0,3)
+            country.armeis += rand.Next(0,3);
             queue.Enqueue(playerUsed);
-            ownerList.add(country);
+            ownerList.Add(country);
         }
+        if (ownerList.Count ==System.Enum.GetValues(typeof(TerritoryType)).Length){
+            return true;
+        }
+        return false;
     }
 
     UnityEngine.Color GetRandomColor()
