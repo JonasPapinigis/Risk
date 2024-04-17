@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     // territory manager
     public Territories territoryManager;
     private bool gameOver;
-    private bool timerActive; private float timer = 0.0f;
+    private bool timerActive; 
+    private float timer = 0.0f;
     private bool nextPressed;
 
 
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         
-        InitialisePlayers(currPlayers);
+        AddPlayers(currPlayers);
         InitialiseTerritories();
         RunGame();
 
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
         
     }
     public bool InitialiseTerritories() {
-        return true;
+        terrs = territories.
     }
     public bool RunGame(){
         bool running = true;
@@ -132,26 +133,28 @@ public class GameManager : MonoBehaviour
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
         if (terr.owner != players[activePlayer]){
-            throw new ArgumentException("Cannot Deploy on other players' territories");
+            throw new ArguementException("Cannot Deploy on other players' territories");
         }
         if (numTroops > total){
-            throw new ArgumentException("Cannot Deploy more troops than you have available");
+            throw new ArguementException("Cannot Deploy more troops than you have available");
         }
 
-        int terrTroops = terr.armies + numTroops;
-        return (numTroops, total-numTroops);
+        terrTroops = terr.armies + numTroops;
+        return terrTroops;
+        
+        
     }
 
     public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
         Player plr = players[activePlayer];
         if (terrFrom.owner != plr && terrTarget.owner != plr){
-            throw new ArgumentException("Cannot target unowned territories");
+            throw new ArguementException("Cannot target unowned territories");
         }
         if (terrFrom.armies <= num){
-            throw new ArgumentException("Insufficient troops on territory");
+            throw new ArguementException("Insufficient troops on territory");
         }
 
-        return (terrFrom.armies - num, terrTarget.armies + num);
+        return (terrmFrom.armies - num, terrTarget.armies + num);
 
     }
     

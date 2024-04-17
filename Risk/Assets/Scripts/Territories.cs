@@ -62,6 +62,7 @@ public class Territories : MonoBehaviour
 {
     public int nTerritories = 46;
     public GameObject territoryPrefab;
+    public List<(Territory,Owner)> ownerList;
     private Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
             {TerritoryType.ALASKA, new TerritoryType[] {TerritoryType.KAMCHATKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ALBERTA }},
             {TerritoryType.ALBERTA, new TerritoryType[] {TerritoryType.ALASKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ONTARIO,TerritoryType.WESTERN_AMERICA }},
@@ -140,7 +141,7 @@ public class Territories : MonoBehaviour
 
     void GenerateTerritories()
     {
-        
+        for terr
     }
 
     UnityEngine.Color GetRandomColor()
