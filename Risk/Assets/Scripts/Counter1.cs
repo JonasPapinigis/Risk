@@ -13,6 +13,6 @@ public class Counter : MonoBehaviour
         m_TextComponent = GetComponent<TMP_Text>();
         //num = Random.Range(0, 3);
         // Change the text on the text component.
-        m_TextComponent.text = armies; 
+        m_TextComponent.text = armies.ToString(); 
     }
 }
