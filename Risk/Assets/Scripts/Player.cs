@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     public Player(string name="", PlayerColor colour=PlayerColor.Red)
     {
         Name = name;
-        Colour = colour;
+        colour = colour;
         armies = 0;
         ownedTerritories = 0;
         ownedInfantries = 0;

@@ -132,28 +132,26 @@ public class GameManager : MonoBehaviour
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
         if (terr.owner != players[activePlayer]){
-            throw new ArguementException("Cannot Deploy on other players' territories");
+            throw new ArgumentException("Cannot Deploy on other players' territories");
         }
         if (numTroops > total){
-            throw new ArguementException("Cannot Deploy more troops than you have available");
+            throw new ArgumentException("Cannot Deploy more troops than you have available");
         }
 
-        terrTroops = terr.armies + numTroops;
-        return terrTroops;
-        
-        
+        int terrTroops = terr.armies + numTroops;
+        return (numTroops, total-numTroops);
     }
 
     public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
         Player plr = players[activePlayer];
         if (terrFrom.owner != plr && terrTarget.owner != plr){
-            throw new ArguementException("Cannot target unowned territories");
+            throw new ArgumentException("Cannot target unowned territories");
         }
         if (terrFrom.armies <= num){
-            throw new ArguementException("Insufficient troops on territory");
+            throw new ArgumentException("Insufficient troops on territory");
         }
 
-        return (terrmFrom.armies - num, troopsTarget + num);
+        return (terrFrom.armies - num, terrTarget.armies + num);
 
     }
     
