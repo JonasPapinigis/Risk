@@ -184,12 +184,12 @@ public class GameManager : MonoBehaviour
     //This method calculates how many troops a certain player deserves at a certain point
     private int calcTroops(Player owner){
         int terrOwned = 0;
-        for ((Territory t, Player p) in territoryManager.ownerList){
+        foreach ((Territory t, Player p) tuple in territoryManager.ownerList){
             if (p == owner){
                 terrOwned++;
             }
         }
-        return terrOwned / int(3)
+        return terrOwned / 3;
     }
 
     private Task TurnTimerHandle()
