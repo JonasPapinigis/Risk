@@ -130,7 +130,6 @@ public class Territories : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateTerritories();
     }
 
     // Update is called once per frame
@@ -152,7 +151,7 @@ public class Territories : MonoBehaviour
             country.setType(type);
             country.armies += Random.Range(0, 3);
             queue.Enqueue(playerUsed);
-            ownerList.Add(country);
+            ownerList.Add(playerUsed,country);
         }
         if (ownerList.Count ==System.Enum.GetValues(typeof(TerritoryType)).Length){
             return true;
