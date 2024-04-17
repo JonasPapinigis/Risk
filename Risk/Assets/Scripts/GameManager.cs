@@ -143,7 +143,11 @@ public class GameManager : MonoBehaviour
             } else {
                 attackerLosses++; // Defender wins or ties this comparison
             }
-    }
+        }
+        if (attLosses > defenderLosses){
+            return (true,attLosses,defenderLosses);
+        }
+        return (false,attLosses,defenderLosses);
     }   
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
