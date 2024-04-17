@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        
+        territoryManager = new Territories();
         AddPlayers(currPlayers);
         InitialiseTerritories();
         RunGame();
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         
     }
     public bool InitialiseTerritories() {
-        terrs = territories.GenerateTerritories(players)
+        territoryManager.GenerateTerritories(players);
     }
     public bool RunGame(){
         bool running = true;
