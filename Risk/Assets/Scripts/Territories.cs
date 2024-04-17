@@ -139,7 +139,7 @@ public class Territories : MonoBehaviour
         
     }
 
-    bool GenerateTerritories(List<Player> players)
+    bool public GenerateTerritories(List<Player> players)
     {   
         ownerList = new List<(Player,Territory)>();
         Queue<Player> queue = new Queue<Player>();
