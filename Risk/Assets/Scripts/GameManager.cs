@@ -181,10 +181,15 @@ public class GameManager : MonoBehaviour
 
     }
     
-
-    //TODO; 
-    private int calcTroops(){
-        Player plr = players[activePlayer];
+    //This method calculates how many troops a certain player deserves at a certain point
+    private int calcTroops(Player owner){
+        int terrOwned = 0;
+        for ((Territory t, Player p) in territoryManager.ownerList){
+            if (p == owner){
+                terrOwned++;
+            }
+        }
+        return terrOwned / int(3)
     }
 
     private Task TurnTimerHandle()
