@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     }
     public bool RunGame(){
         bool running = true;
-        while (true){
+        while (running){
             // create the turn task
             Coroutine coro = StartCoroutine(turn());
             turnTimer.Enabled = true;
@@ -71,6 +71,13 @@ public class GameManager : MonoBehaviour
                 // and start the next turn.
                 StopCoroutine(coro);
                 continue;
+            
+            // TODO: Game loop base case
+            // we need a base condition to exit out of this loop
+            // if (bleh)
+            //      running = false;
+            // on the next iteration we would fall through the loop and we
+            // can run cleanup and exit tasks.
         }
         return running;
     }
