@@ -12,7 +12,7 @@ public enum PlayerColor
     Pink
 }
 
-public class Player : MonoBehaviour
+public class Player
 {
 
     public string Name { get; set; }
@@ -65,17 +65,6 @@ public class Player : MonoBehaviour
     {
         // Implementation depends on your game's mechanics
         return cards.Count > 0; // Example condition
-    }
-
-    // Placeholder for the Unity MonoBehaviour Start and Update methods
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 
     // Additional functionality and methods can be added here
