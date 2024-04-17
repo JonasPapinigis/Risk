@@ -151,7 +151,7 @@ public class Territories : MonoBehaviour
 
             country.setOwner(playerUsed);
             country.setType(type);
-            country.armies += rand.Next(0,3);
+            country.armies += Random.Range(0, 3);
             queue.Enqueue(playerUsed);
             ownerList.Add(country);
         }
