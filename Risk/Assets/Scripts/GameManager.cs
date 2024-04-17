@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Timers;
+using System.Threading.Tasks;
 
 using UnityEngine;
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     // timer stuff  
     Timer turnTimer = new Timer(1000); // ms
+    Timer turnTimer = new Timer(1000); // ms
     int timeElapsed = 0;
 
 
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         territoryManager = new Territories();
         // add an event hook to the timer
-        timer.Elapsed += async (sender, e) => await TurnTimerHandle();
+        turnTimer.Elapsed += async (sender, e) => await TurnTimerHandle();
         AddPlayers(currPlayers);
         InitialiseTerritories();
         RunGame();
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
     
     public bool InitialiseTerritories() {
         territoryManager.GenerateTerritories(players);
+        return true; // TODO: return based on outcome?
     }
     public bool RunGame(){
         bool running = true;
@@ -75,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     // increments the player index unless index == players.Count
     // in which it clips back to zero.
-    public void SelectTurn()
+    public Player SelectTurn()
     {
         activePlayer++;
         activePlayer %= players.Count;
@@ -174,7 +177,7 @@ public class GameManager : MonoBehaviour
         Player plr = players[activePlayer];
     }
 
-    private static Task TurnTimerHandle()
+    private Task TurnTimerHandle()
     {
         timeElapsed++;
         Debug.Log("Turn timer increment event.");
@@ -182,10 +185,8 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator turn()
     {
-        //Initialise timer
         // get the next player from the queue.
-        activePlayer = SelectTurn();
-        Player plr = players[activePlayer];
+        Player plr = SelectTurn();
         while (timerActive){
             //Deploy until there are no troops or cancelled
             int toDeploy = calcTroops();
@@ -195,9 +196,11 @@ public class GameManager : MonoBehaviour
             //Attack until time runs our or cancelled
             //Fortify once or until time runs out
         }
+
+        yield return null;
     }
 
-    private void AddPlayers()
+    private void AddPlayers(int currPlayers)
     {
         if (currPlayers > 6) {
             Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayers);
