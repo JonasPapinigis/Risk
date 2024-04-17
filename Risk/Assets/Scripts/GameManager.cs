@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         
     }
     public bool InitialiseTerritories() {
-        terrs = territories.
+        terrs = territories.GenerateTerritories(players)
     }
     public bool RunGame(){
         bool running = true;
