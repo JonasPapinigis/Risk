@@ -6,13 +6,13 @@ using TMPro;
 public class Counter : MonoBehaviour
 {
     private TMP_Text m_TextComponent;
-    public int numOfArmies;
+    public int armies;
     
     private void Awake()
     {
         m_TextComponent = GetComponent<TMP_Text>();
         //num = Random.Range(0, 3);
         // Change the text on the text component.
-        m_TextComponent.text = numOfArmies.ToString(); 
+        m_TextComponent.text = armies; 
     }
 }
