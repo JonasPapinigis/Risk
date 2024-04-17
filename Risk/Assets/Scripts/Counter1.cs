@@ -11,7 +11,7 @@ public class Counter : MonoBehaviour
     private void Awake()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-        //num = Random.Range(1, 4);
+        //num = Random.Range(0, 3);
         // Change the text on the text component.
         m_TextComponent.text = numOfArmies.ToString(); 
     }
