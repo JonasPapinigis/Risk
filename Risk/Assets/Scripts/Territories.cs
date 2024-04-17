@@ -60,9 +60,9 @@ public enum TerritoryType: int
 
 public class Territories : MonoBehaviour
 {
-    public int nTerritories = 46;
+    public static int nTerritories = 46;
     public GameObject territoryPrefab;
-    public List<(Territory,Owner)> ownerList;
+    public List<(Territory,Player)> ownerList;
     private Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
             {TerritoryType.ALASKA, new TerritoryType[] {TerritoryType.KAMCHATKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ALBERTA }},
             {TerritoryType.ALBERTA, new TerritoryType[] {TerritoryType.ALASKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ONTARIO,TerritoryType.WESTERN_AMERICA }},
@@ -139,9 +139,21 @@ public class Territories : MonoBehaviour
         
     }
 
-    void GenerateTerritories()
-    {
-        for terr
+     GenerateTerritories(List<Players> players)
+    {   
+        ownerList = new List<(Player,Territory)>();
+        Queue<Player> queue = new Queue<>();
+        foreach (type in TerritoryType){
+            playerUsed = queue.Dequeue();
+            Territory country = new Territory();
+            Random rand = new Random()
+
+            country.setOwner(playerUsed);
+            country.setType(type);
+            country.armeis += rand.Next(0,3)
+            queue.Enqueue(playerUsed);
+            ownerList.add(country);
+        }
     }
 
     UnityEngine.Color GetRandomColor()

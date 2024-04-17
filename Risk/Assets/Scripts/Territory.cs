@@ -47,4 +47,7 @@ public class Territory : MonoBehaviour
 
     void SetColour(){}
 
+    void SetType(TerritoryType type){
+        terr = type
+    }
 }
