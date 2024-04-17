@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
         Player plr = SelectTurn();
         while (timerActive){
             //Deploy until there are no troops or cancelled
-            int toDeploy = calcTroops();
+            int toDeploy = calcTroops(plr);
             while(toDeploy > 0){
                 //toDeploy = 
             }
