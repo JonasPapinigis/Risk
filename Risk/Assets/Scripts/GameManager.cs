@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Timers;
 
 using UnityEngine;
 
@@ -20,15 +21,19 @@ public class GameManager : MonoBehaviour
     // territory manager
     public Territories territoryManager;
     private bool gameOver;
-    private bool timerActive; 
-    private float timer = 0.0f;
+    private bool timerActive; private float timer = 0.0f;
     private bool nextPressed;
 
+    // timer stuff  
+    Timer turnTimer = new Timer(1000) // ms
+    int timeElapsed = 0;
 
 
     public void Start()
     {
         territoryManager = new Territories();
+        // add an event hook to the timer
+        timer.Elapsed += async (sender, e) => await TurnTimerHandle();
         AddPlayers(currPlayers);
         InitialiseTerritories();
         RunGame();
@@ -56,7 +61,14 @@ public class GameManager : MonoBehaviour
     public bool RunGame(){
         bool running = true;
         while (true){
-            
+            // create the turn task
+            Coroutine coro = StartCoroutine(turn());
+            turnTimer.Enabled = true;
+            if (timeElapsed > 1000) // how many seconds is the turn?
+                // the player is out of time so we cancel the turn coroutine
+                // and start the next turn.
+                StopCoroutine(coro);
+                continue;
         }
         return running;
     }
@@ -133,28 +145,26 @@ public class GameManager : MonoBehaviour
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
         if (terr.owner != players[activePlayer]){
-            throw new ArguementException("Cannot Deploy on other players' territories");
+            throw new ArgumentException("Cannot Deploy on other players' territories");
         }
         if (numTroops > total){
-            throw new ArguementException("Cannot Deploy more troops than you have available");
+            throw new ArgumentException("Cannot Deploy more troops than you have available");
         }
 
-        terrTroops = terr.armies + numTroops;
-        return terrTroops;
-        
-        
+        int terrTroops = terr.armies + numTroops;
+        return (numTroops, total-numTroops);
     }
 
     public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
         Player plr = players[activePlayer];
         if (terrFrom.owner != plr && terrTarget.owner != plr){
-            throw new ArguementException("Cannot target unowned territories");
+            throw new ArgumentException("Cannot target unowned territories");
         }
         if (terrFrom.armies <= num){
-            throw new ArguementException("Insufficient troops on territory");
+            throw new ArgumentException("Insufficient troops on territory");
         }
 
-        return (terrmFrom.armies - num, terrTarget.armies + num);
+        return (terrFrom.armies - num, terrTarget.armies + num);
 
     }
     
@@ -164,10 +174,18 @@ public class GameManager : MonoBehaviour
         Player plr = players[activePlayer];
     }
 
-    public bool turn(){
+    private static Task TurnTimerHandle()
+    {
+        timeElapsed++;
+        Debug.Log("Turn timer increment event.");
+    }
+
+    public IEnumerator turn()
+    {
         //Initialise timer
+        // get the next player from the queue.
+        activePlayer = SelectTurn();
         Player plr = players[activePlayer];
-        timerActive = true;
         while (timerActive){
             //Deploy until there are no troops or cancelled
             int toDeploy = calcTroops();
@@ -177,8 +195,8 @@ public class GameManager : MonoBehaviour
             //Attack until time runs our or cancelled
             //Fortify once or until time runs out
         }
-
     }
+
     private void AddPlayers()
     {
         if (currPlayers > 6) {
