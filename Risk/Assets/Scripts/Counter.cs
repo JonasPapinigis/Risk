@@ -7,9 +7,10 @@ using TMPro;
 public class TextUpdater: MonoBehaviour
 {
   public TMP_Text messageText;
-
+  public int num;
+  num = Random.range(1, 3)
   void Update() // Or other method
   {
-    messageText.SetText("4");
+    messageText.SetText(num);
   }
 }
