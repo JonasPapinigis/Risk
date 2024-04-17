@@ -139,13 +139,13 @@ public class Territories : MonoBehaviour
         
     }
 
-    bool GenerateTerritories(List<Players> players)
+    bool GenerateTerritories(List<Player> players)
     {   
         ownerList = new List<(Player,Territory)>();
         Queue<Player> queue = new Queue<Player>();
         Random rand = new Random();
         foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType))){
-            Player playerUsed = queue.Dequeue()
+            Player playerUsed = queue.Dequeue();
             Territory country = new Territory();
             
 
