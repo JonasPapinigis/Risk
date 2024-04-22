@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
         return players[activePlayer];
     }
 
-        private int calcTroops(Player owner){
+    private int calcTroops(Player owner){
         int terrOwned = 0;
         foreach ((Territory t, Player p) tuple in gm.territoryManager.ownerList){
             if (tuple.Item2 == owner){
@@ -65,5 +65,22 @@ public class PlayerManager : MonoBehaviour
 
     public List<Player> getPlayers(){
         return players;
+    }
+
+    public void SetupGUI(){
+        switch (currPlayers){
+            case (4):
+                //Set colours
+                //Assign Troops Total, TroopsPerTurn for Each
+                P1TotalTroops,P2TotalTroops,P3TotalTroops,P4TotalTroops = 
+            case (3):
+                //Hide P4 Elements
+                //Set colours
+                //Assign Troops Total, TroopsPerTurn for Each
+            case (2):
+                //Hide P3,P4 Elements
+                //Set colours
+                //Assign Troops Total, TroopsPerTurn for Each
+        }
     }
 }
