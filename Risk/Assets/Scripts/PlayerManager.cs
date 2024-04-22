@@ -20,4 +20,41 @@ public class PlayerManager : MonoBehaviour
     {
         
     }
+        public Player NextTurn()
+    {
+        activePlayer++;
+        activePlayer %= players.Count;
+        return players[activePlayer];
+    }
+
+        private int calcTroops(Player owner){
+        int terrOwned = 0;
+        foreach ((Territory t, Player p) tuple in territoryManager.ownerList){
+            if (tuple.Item2 == owner){
+                terrOwned++;
+            }
+        }
+        return terrOwned / 3;
+    }
+
+    private void AddPlayers(int currPlayers)
+    {
+        if (currPlayers > 6) {
+            Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayers);
+            return;
+        }
+        if (currPlayers < 2) {
+            Debug.Log("Not enough players for a valid game session. Game session has not been created. Players: " + currPlayers);
+            return;
+        }
+
+        for (int i=0; i<currPlayers; i++) {
+            // get the color based on the player index.
+            // e.g. i=0 means color=Color.Red
+            PlayerColor color = (PlayerColor)i;
+            // TODO: player name
+
+            players.Add(new Player("", color));
+        }
+    }
 }
