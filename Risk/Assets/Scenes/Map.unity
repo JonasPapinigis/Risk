@@ -1296,6 +1296,7 @@ GameObject:
   - component: {fileID: 143633079}
   - component: {fileID: 143633081}
   - component: {fileID: 143633080}
+  - component: {fileID: 143633082}
   m_Layer: 5
   m_Name: Central America Counter
   m_TagString: Untagged
@@ -1421,6 +1422,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143633078}
   m_CullTransparentMesh: 1
+--- !u!114 &143633082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143633078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &176409259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1828,7 @@ GameObject:
   - component: {fileID: 230999547}
   - component: {fileID: 230999549}
   - component: {fileID: 230999548}
+  - component: {fileID: 230999550}
   m_Layer: 5
   m_Name: Easter US Counter
   m_TagString: Untagged
@@ -1934,6 +1954,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230999546}
   m_CullTransparentMesh: 1
+--- !u!114 &230999550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230999546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &241747326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,6 +3049,7 @@ GameObject:
   - component: {fileID: 497170844}
   - component: {fileID: 497170846}
   - component: {fileID: 497170845}
+  - component: {fileID: 497170847}
   m_Layer: 5
   m_Name: Greenland Counter
   m_TagString: Untagged
@@ -3136,6 +3175,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497170843}
   m_CullTransparentMesh: 1
+--- !u!114 &497170847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497170843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &506734177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3686,7 @@ GameObject:
   - component: {fileID: 624241380}
   - component: {fileID: 624241384}
   - component: {fileID: 624241383}
+  - component: {fileID: 624241385}
   m_Layer: 5
   m_Name: Alaska Counter
   m_TagString: Untagged
@@ -3754,6 +3812,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624241379}
   m_CullTransparentMesh: 1
+--- !u!114 &624241385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624241379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &629074500
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,6 +4810,7 @@ GameObject:
   - component: {fileID: 869900083}
   - component: {fileID: 869900085}
   - component: {fileID: 869900084}
+  - component: {fileID: 869900086}
   m_Layer: 5
   m_Name: NWT Counter
   m_TagString: Untagged
@@ -4859,6 +4936,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869900082}
   m_CullTransparentMesh: 1
+--- !u!114 &869900086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869900082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &876472694
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,6 +6689,7 @@ GameObject:
   - component: {fileID: 1276180152}
   - component: {fileID: 1276180154}
   - component: {fileID: 1276180153}
+  - component: {fileID: 1276180155}
   m_Layer: 5
   m_Name: Quebec Counter
   m_TagString: Untagged
@@ -6719,6 +6815,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276180151}
   m_CullTransparentMesh: 1
+--- !u!114 &1276180155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276180151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &1296762857
 GameObject:
   m_ObjectHideFlags: 0
@@ -7815,6 +7929,7 @@ GameObject:
   - component: {fileID: 1739870044}
   - component: {fileID: 1739870046}
   - component: {fileID: 1739870045}
+  - component: {fileID: 1739870047}
   m_Layer: 5
   m_Name: Alberta Counter
   m_TagString: Untagged
@@ -7940,6 +8055,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739870043}
   m_CullTransparentMesh: 1
+--- !u!114 &1739870047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739870043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &1768135604
 GameObject:
   m_ObjectHideFlags: 0
@@ -8888,6 +9021,7 @@ GameObject:
   - component: {fileID: 1868124805}
   - component: {fileID: 1868124804}
   - component: {fileID: 1868124803}
+  - component: {fileID: 1868124807}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8984,6 +9118,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1868124807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868124802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &1872895245
 GameObject:
   m_ObjectHideFlags: 0
@@ -10225,6 +10377,7 @@ GameObject:
   - component: {fileID: 2028672239}
   - component: {fileID: 2028672241}
   - component: {fileID: 2028672240}
+  - component: {fileID: 2028672242}
   m_Layer: 5
   m_Name: Western US Counter
   m_TagString: Untagged
@@ -10350,6 +10503,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028672238}
   m_CullTransparentMesh: 1
+--- !u!114 &2028672242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028672238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 0
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 0
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
