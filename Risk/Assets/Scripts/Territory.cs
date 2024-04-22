@@ -30,7 +30,7 @@ public class Territory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        CountUpdate();
     }
 
     // NB: Hacky, I don't like it
@@ -67,7 +67,13 @@ public class Territory : MonoBehaviour
     private void Awake()
     {
         armies = Random.Range(1, 4);
-        ArmyCounter = GetComponent<TMP_Text>();
-        ArmyCounter.text = armies.ToString(); 
+        CountUpdate();
+         
     }
+
+    public void CountUpdate()
+    {
+        ArmyCounter = GetComponent<TMP_Text>();
+        ArmyCounter.text = armies.ToString();
+    } 
 }
