@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {   
-    public UnityEngine.UIElements.Button startButton;
-    public Dropdown playerPicker;
+    public UnityEngine.UI.Button startButton;
+    public TMP_Dropdown playerPicker;
+    private int currPlayers;
     // Start is called before the first frame update
     void Start()
-    {
-        startButton.onClick.AddListener(GetDropdownValue);
+    {       
+        startButton.onClick.AddListener(()=>PressedFunction());
     }
 
     // Update is called once per frame
@@ -19,10 +22,18 @@ public class InputManager : MonoBehaviour
     {
         
     }
-    public int GetDropdownValue()
+    public int SetDropdownValue()
     {
         int selectedIndex = playerPicker.value;
-        string selectedText = playerPicker.options[selectedIndex].text;
-        Debug.Log("Selected Index: " + selectedIndex + ", Selected Text: " + selectedText);
+        currPlayers = selectedIndex + 2;
+        return currPlayers;
+    }
+
+    private void PressedFunction(){
+        Debug.Log("Button Pressed");
+        SetDropdownValue();
+        Debug.Log("Current Players: "+currPlayers);
+        //GetDropDownValue()
+        //RunGame(PlayerCount)
     }
 }
