@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Timers;
-using System.Threading;
 using System.Threading.Tasks;
 
 using UnityEngine;
@@ -12,8 +11,6 @@ using UnityEngine;
 // System.Random instead of UnityEngine.Random.
 // https://docs.unity3d.com/ScriptReference/Random.html
 using Random = System.Random;
-
-using Timer = System.Timers.Timer;
 
 public class GameManager : MonoBehaviour
 {
