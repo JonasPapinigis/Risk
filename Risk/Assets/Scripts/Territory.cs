@@ -30,7 +30,8 @@ public class Territory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TMP_Text textComponent = ArmyCounter.GetComponent<TMP_Text>();
+        textComponent.text = armies.ToString();
     }
 
     // NB: Hacky, I don't like it
