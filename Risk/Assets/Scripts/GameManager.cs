@@ -33,7 +33,9 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        Debug.Log("Hello world!");
         territoryManager = Instantiate(territoryManager);
+        Debug.Log("Territory manager created!");
         // add an event hook to the timer
         turnTimer.Elapsed += async (sender, e) => await TurnTimerHandle();
         Debug.Log("Adding players");
@@ -60,13 +62,16 @@ public class GameManager : MonoBehaviour
         currPlayers = num;
     }
     
-    public bool InitialiseTerritories() {
+    public void InitialiseTerritories() {
+        Debug.Log("Generating initial territories.");
         territoryManager.GenerateTerritories(players);
-        return true; // TODO: return based on outcome?
+        Debug.Log("Intialised terrirotirw");
+        //return true; // TODO: return based on outcome?
     }
     public bool RunGame(){
         Debug.Log("Running game!");
         bool running = true;
+        /*
         while (running){
             // create the turn task
             Coroutine coro = StartCoroutine(turn());
@@ -84,6 +89,7 @@ public class GameManager : MonoBehaviour
             // on the next iteration we would fall through the loop and we
             // can run cleanup and exit tasks.
         }
+        */
         return running;
     }
 

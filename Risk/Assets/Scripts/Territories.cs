@@ -62,8 +62,6 @@ public class Territories : MonoBehaviour
 {
     public static int nTerritories = 46;
 
-    public GameObject territoryPrefab;
-
     public Dictionary<TerritoryType, Territory> territories = new Dictionary<TerritoryType, Territory>();
     
     public List<(Territory,Player)> ownerList;
@@ -134,13 +132,6 @@ public class Territories : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var foundTerritories = FindObjectsOfType<Territory>();
-        for (int i=0; i<foundTerritories.Length; i++) {
-            // add the territory to the territory list.
-            territories[foundTerritories[i].territoryType] = foundTerritories[i];
-            Debug.Log("Found territory " + foundTerritories[i].territoryType);
-        }
-        Debug.Log("Found " + foundTerritories.Length + " territories.");
     }
 
     // Update is called once per frame
@@ -149,34 +140,29 @@ public class Territories : MonoBehaviour
         
     }
 
-    public bool GenerateTerritories(List<Player> players)
+    public void GenerateTerritories(List<Player> players)
     {   
+        var foundTerritories = FindObjectsOfType<Territory>();
+        for (int i=0; i<foundTerritories.Length; i++) {
+            // add the territory to the territory list.
+            territories[foundTerritories[i].territoryType] = foundTerritories[i];
+            Debug.Log("Found territory " + foundTerritories[i].territoryType);
+        }
+        Debug.Log("Found " + foundTerritories.Length + " territories.");
+
         ownerList = new List<(Territory,Player)>();
         Queue<Player> queue = new Queue<Player>(players);
-    
-        foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType)))
-        {
-            // Dequeue a player from the queue to assign ownership
+
+        foreach (var item in territories) {
             Player playerUsed = queue.Dequeue();
-        
-            // Instantiate a new territory object from the prefab
-            GameObject territoryObject = Instantiate(territoryPrefab, transform.position, Quaternion.identity);
-            Territory territory = territoryObject.GetComponent<Territory>();
-
-            // Set the owner and type of the territory
-            territory.setOwner(playerUsed); // Adjusted method call here
-
-            // Add some armies to the territory
-            territory.armies += Random.Range(0, 3);
-
-            // Enqueue the player back to the end of the queue
+            Territory territory = item.Value;
+            territory.setOwner(playerUsed);
+            territory.armies += Random.Range(1,3);
             queue.Enqueue(playerUsed);
-
-            //Add the territory and its owner to the list
             ownerList.Add((territory, playerUsed));
-        }
 
-        return ownerList.Count == System.Enum.GetValues(typeof(TerritoryType)).Length;
+            Debug.Log("Territory " + territory.territoryType + " got " + territory.armies + " armies.");
+        }
     }
 
 
