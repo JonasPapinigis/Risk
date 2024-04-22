@@ -1196,6 +1196,7 @@ MonoBehaviour:
   P4TotalTroops: {fileID: 1147429264}
   P4TroopsPerTurn: {fileID: 92175445}
   P4Panel: {fileID: 890526843}
+  gm: {fileID: 1817362288}
 --- !u!4 &107058487
 Transform:
   m_ObjectHideFlags: 0
