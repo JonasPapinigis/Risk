@@ -15,9 +15,8 @@ using Random = System.Random;
 public class GameManager : MonoBehaviour
 {
     // list of all players
-    public List <Player> players = new List<Player>();
+    
     // index of player currently taking their turn
-    public int currPlayers = InputManager.pCount;
     private int activePlayer;
     // territory manager
     public Territories territoryManager;
@@ -37,16 +36,14 @@ public class GameManager : MonoBehaviour
         territoryManager = Instantiate(territoryManager);
         playerManager = Instantiate(playerManager);
         Debug.Log("Territory manager created!");
-        // add an event hook to the timer
         turnTimer.Elapsed += async (sender, e) => await TurnTimerHandle();
         Debug.Log("Adding players");
-        AddPlayers(3);
+        playerManager.AddPlayers();
         Debug.Log("Initialising territories");
         InitialiseTerritories();
         Debug.Log("Starting game");
 
-        // Run the game loop as a separate task so we can ensure that the gamne
-        // loop does not block Unity's main thread.
+
         Task.Run(RunGame);
     }
 
@@ -60,23 +57,17 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    public void readPlayerCount(int num){
-        currPlayers = num;
-    }
     
     public void InitialiseTerritories() {
         Debug.Log("Generating initial territories.");
-        territoryManager.GenerateTerritories(players);
+        territoryManager.GenerateTerritories(playerManager.getPlayers());
         Debug.Log("Intialised terrirotirw");
-        //return true; // TODO: return based on outcome?
     }
     public Task RunGame(){
         Debug.Log("Running game!");
         bool running = true;
         
         while (running){
-            // create the turn task
             Coroutine coro = StartCoroutine(turn());
             turnTimer.Enabled = true;
             if (timeElapsed > 1000) // how many seconds is the turn?
@@ -98,12 +89,7 @@ public class GameManager : MonoBehaviour
 
     // increments the player index unless index == players.Count
     // in which it clips back to zero.
-    public Player SelectTurn()
-    {
-        activePlayer++;
-        activePlayer %= players.Count;
-        return players[activePlayer];
-    }
+
 
     public bool isGameOver()
     {
@@ -171,7 +157,7 @@ public class GameManager : MonoBehaviour
     }   
 
     public (int newTroops, int troopsLeft) deploy(Territory terr, int numTroops, int total){
-        if (terr.owner != players[activePlayer]){
+        if (terr.owner != playerManager.getPlayers()[activePlayer]){
             throw new ArgumentException("Cannot Deploy on other players' territories");
         }
         if (numTroops > total){
@@ -183,7 +169,7 @@ public class GameManager : MonoBehaviour
     }
 
     public (int troopsFrom, int troopsTarget) fortify(Territory terrFrom, Territory terrTarget, int num){
-        Player plr = players[activePlayer];
+        Player plr = playerManager.getPlayers()[activePlayer];
         if (terrFrom.owner != plr && terrTarget.owner != plr){
             throw new ArgumentException("Cannot target unowned territories");
         }
@@ -196,15 +182,7 @@ public class GameManager : MonoBehaviour
     }
     
     //This method calculates how many troops a certain player deserves at a certain point
-    private int calcTroops(Player owner){
-        int terrOwned = 0;
-        foreach ((Territory t, Player p) tuple in territoryManager.ownerList){
-            if (tuple.Item2 == owner){
-                terrOwned++;
-            }
-        }
-        return terrOwned / 3;
-    }
+
 
     private Task TurnTimerHandle()
     {
@@ -216,7 +194,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator turn()
     {
         // get the next player from the queue.
-        Player plr = SelectTurn();
+        Player plr = playerManager.NextTurn();
 
         /*
             int troopsToDeploy = calcTroops(plr);
@@ -226,24 +204,5 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
-    private void AddPlayers(int currPlayers)
-    {
-        if (currPlayers > 6) {
-            Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayers);
-            return;
-        }
-        if (currPlayers < 2) {
-            Debug.Log("Not enough players for a valid game session. Game session has not been created. Players: " + currPlayers);
-            return;
-        }
-
-        for (int i=0; i<currPlayers; i++) {
-            // get the color based on the player index.
-            // e.g. i=0 means color=Color.Red
-            PlayerColor color = (PlayerColor)i;
-            // TODO: player name
-
-            players.Add(new Player("", color));
-        }
-    }
+    
 }

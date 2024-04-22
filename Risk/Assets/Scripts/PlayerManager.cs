@@ -10,9 +10,14 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI P3Name; public TextMeshProUGUI P3TotalTroops; public TextMeshProUGUI P3TroopsPerTurn; public RectTransform P3Panel;
     public TextMeshProUGUI P4Name; public TextMeshProUGUI P4TotalTroops; public TextMeshProUGUI P4TroopsPerTurn; public RectTransform P4Panel;
     public GameManager gm;
+    private int activePlayer = -1;
+    public int currPlayers = InputManager.pCount;
+    public List <Player> players = new List<Player>();
+
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +25,8 @@ public class PlayerManager : MonoBehaviour
     {
         
     }
-        public Player NextTurn()
+    
+    public Player NextTurn()
     {
         activePlayer++;
         activePlayer %= players.Count;
@@ -29,7 +35,7 @@ public class PlayerManager : MonoBehaviour
 
         private int calcTroops(Player owner){
         int terrOwned = 0;
-        foreach ((Territory t, Player p) tuple in territoryManager.ownerList){
+        foreach ((Territory t, Player p) tuple in gm.territoryManager.ownerList){
             if (tuple.Item2 == owner){
                 terrOwned++;
             }
@@ -37,7 +43,7 @@ public class PlayerManager : MonoBehaviour
         return terrOwned / 3;
     }
 
-    private void AddPlayers(int currPlayers)
+    public void AddPlayers()
     {
         if (currPlayers > 6) {
             Debug.Log("Maximum players exceeded. Game session has not been created. Players: " + currPlayers);
@@ -52,9 +58,12 @@ public class PlayerManager : MonoBehaviour
             // get the color based on the player index.
             // e.g. i=0 means color=Color.Red
             PlayerColor color = (PlayerColor)i;
-            // TODO: player name
 
             players.Add(new Player("", color));
         }
+    }
+
+    public List<Player> getPlayers(){
+        return players;
     }
 }
