@@ -33,7 +33,6 @@ public class InputManager : MonoBehaviour
         Debug.Log("Button Pressed");
         SetDropdownValue();
         Debug.Log("Current Players: "+pCount);
-        //GetDropDownValue()
-        //RunGame(PlayerCount)
+        SceneManager.LoadScene("Map");
     }
 }
