@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 25
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 25
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 28
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 28
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 29
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 29
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 27
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 27
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 36
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 36
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 37
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 37
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 12
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 12
@@ -2114,7 +2114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 15
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 15
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 2
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 2
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 7
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 7
@@ -3040,7 +3040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 17
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 17
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 26
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 26
@@ -3401,7 +3401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 32
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 32
@@ -3543,7 +3543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 13
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 13
@@ -4300,7 +4300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 5
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 5
@@ -4351,7 +4351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 30
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 30
@@ -4493,7 +4493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 14
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 14
@@ -5506,7 +5506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 9
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 9
@@ -5557,7 +5557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 16
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 16
@@ -5712,7 +5712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 10
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 10
@@ -5897,7 +5897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 41
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 41
@@ -6052,7 +6052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 11
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 11
@@ -6237,7 +6237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 21
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 21
@@ -6526,7 +6526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 3
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 3
@@ -6629,7 +6629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 8
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 8
@@ -6680,7 +6680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 39
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 39
@@ -6938,7 +6938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 38
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 38
@@ -7154,7 +7154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 34
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 34
@@ -7687,7 +7687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 6
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 6
@@ -7817,7 +7817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 31
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 31
@@ -7920,7 +7920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 35
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 35
@@ -8178,7 +8178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 22
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 22
@@ -8281,7 +8281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 24
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 24
@@ -8436,7 +8436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 1
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 1
@@ -8533,7 +8533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 23
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 23
@@ -8636,7 +8636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 33
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 33
@@ -8875,7 +8875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 20
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 20
@@ -9462,7 +9462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 4
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 4
@@ -9513,7 +9513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 19
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 19
@@ -9817,7 +9817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 18
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 18
@@ -9920,7 +9920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 40
   defaultMaterial: {fileID: 0}
   armies: 1
   terr: 40
