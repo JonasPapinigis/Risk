@@ -33,14 +33,13 @@ public class Territory : MonoBehaviour
     // NB: Hacky, I don't like it
     void EnsureSpriteRenderer()
     {
-
         renderer = GetComponent<SpriteRenderer>();
-        // we need to ensure that instances have a cube renderer.
-        // NB: this is just temporary until individual meshes for each country
-        // are added.
-        if (renderer == null) {
+        // We need to ensure that instances have a SpriteRenderer.
+        // This is just temporary until individual meshes for each country are added.
+        if (renderer == null)
+        {
             renderer = gameObject.AddComponent<SpriteRenderer>();
-            //cubeRenderer.material = defaultMaterial;
+            renderer.material = defaultMaterial; // Corrected reference to renderer
         }
     }
 
@@ -49,7 +48,13 @@ public class Territory : MonoBehaviour
     }
 
     void SetColour(Color color){
-        renderer.material.color = PlayerColor;
+        if (PlayerColor == Color.clear){
+           renderer.color = Color.white; 
+        }
+        else{
+            renderer.color = PlayerColor;
+        }
+        
     }
 
     public void SetType(TerritoryType type){
