@@ -17,7 +17,7 @@ public class Player
 
     public string Name { get; set; }
     public PlayerColor colour { get; set; }
-
+    
     private List<Territory> territories = new List<Territory>();
     private List<PlayingCard> cards = new List<PlayingCard>();
     private int armies;
@@ -34,38 +34,17 @@ public class Player
         ownedInfantries = 0;
     }
 
-    public void AddTerritory(Territory territory)
-    {
-        territories.Add(territory);
-        ownedTerritories++; // Increment the ownedTerritories counter
+
+    public void setArmies(int i){
+        armies = i;
     }
 
-    public void RemoveTerritory(Territory territory)
-    {
-        territories.Remove(territory);
-        ownedTerritories--; // Decrement the ownedTerritories counter
+    public void incrementArmies(int i){
+        armies += i;
     }
 
-    public void DeployArmies(Territory territory, int numberOfArmies)
-    {
-        if (territories.Contains(territory) && numberOfArmies <= armies)
-        {
-            territory.armies += numberOfArmies;
-            armies -= numberOfArmies;
-            ownedInfantries += numberOfArmies; // Update the ownedInfantries counter
-        }
+    public int getArmies(){
+        return armies;
     }
 
-    public bool EnsurePlayerAlive()
-    {
-        return territories.Count > 0; // Updated to use the list for a more accurate count
-    }
-
-    public bool CanUsePlayingCards()
-    {
-        // Implementation depends on your game's mechanics
-        return cards.Count > 0; // Example condition
-    }
-
-    // Additional functionality and methods can be added here
 }

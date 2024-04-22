@@ -71,5 +71,8 @@ public class Territory : MonoBehaviour
         ArmyCounter = GetComponent<TMP_Text>();
         ArmyCounter.text = armies.ToString();
     }
+    public Player getOwner(){
+        return owner;
+    }
 
 }

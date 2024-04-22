@@ -64,7 +64,6 @@ public class Territories : MonoBehaviour
 
     public Dictionary<TerritoryType, Territory> territories = new Dictionary<TerritoryType, Territory>();
     
-    public List<(Territory,Player)> ownerList;
     private Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
             {TerritoryType.ALASKA, new TerritoryType[] {TerritoryType.KAMCHATKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ALBERTA }},
             {TerritoryType.ALBERTA, new TerritoryType[] {TerritoryType.ALASKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ONTARIO,TerritoryType.WESTERN_AMERICA }},
@@ -171,6 +170,66 @@ public class Territories : MonoBehaviour
     {
         int randomIndex = Random.Range(0, colours.Length);
         return colours[randomIndex];
+    }
+
+    public List<string> ContinentCheck(Player p)
+    {
+        List<string> continentsOwned = new List<string>();
+        
+
+        foreach (var continent in continents)
+        {
+            bool ownsAll = true;  
+            string continentName = continent.Key;
+            TerritoryType[] territoriesInContinent = continent.Value.Item1; 
+            foreach (TerritoryType te in territoriesInContinent)
+            {
+
+                if (territories[te].getOwner() != p)
+                {
+                    ownsAll = false;
+                    break;
+                }
+            }
+
+            if (ownsAll)
+            {
+                continentsOwned.Add(continentName);
+            }
+        }
+
+        return continentsOwned;
+    }
+
+    public int getContinentBonus(string continent)
+    {
+        switch (continent)
+        {
+            case "s_america":
+                return 2;
+            case "australia":
+                return 2;
+            case "n_america":
+                return 5;
+            case "europe":
+                return 5;
+            case "africa":
+                return 3;
+            case "asia":
+                return 7;
+            default:
+                throw new ArgumentException("Invalid continent name provided.", "continent");
+        }
+    }
+
+    public int getTerritoryCount(Player p){
+        int totalTerr = 0;
+        foreach (Territory t in territories.Value.Item1){
+            if (t.getOwner() == p){
+                totalTerr++;
+            }
+        }
+        return totalTerr;
     }
 }
 

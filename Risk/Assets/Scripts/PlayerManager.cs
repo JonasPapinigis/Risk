@@ -33,14 +33,16 @@ public class PlayerManager : MonoBehaviour
         return players[activePlayer];
     }
 
-    private int calcTroops(Player owner){
-        int terrOwned = 0;
-        foreach ((Territory t, Player p) tuple in gm.territoryManager.ownerList){
-            if (tuple.Item2 == owner){
-                terrOwned++;
-            }
+    private int calcTroopsNextTurn(Player owner){
+        int nextTurn = 0;
+        List<string> ownedConts = gm.territoryManager.ContinentCheck(owner);
+        int allTerrs = gm.territoryManager.getTerritoryCount(owner);
+        foreach (string cont in ownedConts){
+            nextTurn += gm.territoryManager.getContinentBonus(cont);
         }
-        return terrOwned / 3;
+        nextTurn += ownedConts / 3;
+        return nextTurn;
+
     }
 
     public void AddPlayers()
@@ -61,6 +63,16 @@ public class PlayerManager : MonoBehaviour
 
             players.Add(new Player("", color));
         }
+        foreach (Player p in players){
+            switch (players.Count){
+                case (2):
+                    p.setArmies(40);
+                case (3):
+                    p.setArmies(35);
+                case (4):
+                    p.setArmies(30);
+            }
+        }
     }
 
     public List<Player> getPlayers(){
@@ -71,16 +83,40 @@ public class PlayerManager : MonoBehaviour
         switch (currPlayers){
             case (4):
                 //Set colours
-                //Assign Troops Total, TroopsPerTurn for Each
-                P1TotalTroops,P2TotalTroops,P3TotalTroops,P4TotalTroops = 
+                P1TotalTroops = calcTroopsNextTurn(players[0]);
+                P2TotalTroops = calcTroopsNextTurn(players[1]);
+                P3TotalTroops = calcTroopsNextTurn(players[2]);
+                P4TotalTroops = calcTroopsNextTurn(players[3]);
+
+                P1TotalTroops = players[0].getArmies();
+                P2TotalTroops = players[1].getArmies();
+                P3TotalTroops = players[2].getArmies();
+                P4TotalTroops = players[3].getArmies();
+
+                
+
             case (3):
                 //Hide P4 Elements
+                P4Name.setActive(false); P4Panel.setActive(false); P4TotalTroops.setActive(false); P4TroopsPerTurn.setActive(false);
                 //Set colours
-                //Assign Troops Total, TroopsPerTurn for Each
+                P1TotalTroops = calcTroopsNextTurn(players[0]);
+                P2TotalTroops = calcTroopsNextTurn(players[1]);
+                P3TotalTroops = calcTroopsNextTurn(players[2]);
+
+                P1TotalTroops = players[0].getArmies();
+                P2TotalTroops = players[1].getArmies();
+                P3TotalTroops = players[2].getArmies();
             case (2):
-                //Hide P3,P4 Elements
                 //Set colours
-                //Assign Troops Total, TroopsPerTurn for Each
+                P4Name.setActive(false); P4Panel.setActive(false); P4TotalTroops.setActive(false); P4TroopsPerTurn.setActive(false);
+                P3Name.setActive(false); P3Panel.setActive(false); P3TotalTroops.setActive(false); P3TroopsPerTurn.setActive(false);
+                //Set colours
+                P1TotalTroops = calcTroopsNextTurn(players[0]);
+                P2TotalTroops = calcTroopsNextTurn(players[1]);
+
+                P1TotalTroops = players[0].getArmies();
+                P2TotalTroops = players[1].getArmies();
         }
     }
+
 }
