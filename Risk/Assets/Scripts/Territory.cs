@@ -10,6 +10,7 @@ using UnityEngine;
  */
 public class Territory : MonoBehaviour
 {   
+    public TerritoryType territoryType;
     private SpriteRenderer renderer;
     public Material defaultMaterial;    
     public int armies = 1;
@@ -33,11 +34,12 @@ public class Territory : MonoBehaviour
     // NB: Hacky, I don't like it
     void EnsureSpriteRenderer()
     {
+
         renderer = GetComponent<SpriteRenderer>();
-        // We need to ensure that instances have a SpriteRenderer.
-        // This is just temporary until individual meshes for each country are added.
-        if (renderer == null)
-        {
+        // we need to ensure that instances have a SpriteRenderer.
+        // NB: this is just temporary until individual meshes for each country
+        // are added.
+        if (renderer == null) {
             renderer = gameObject.AddComponent<SpriteRenderer>();
             renderer.material = defaultMaterial; // Corrected reference to renderer
         }
@@ -49,12 +51,11 @@ public class Territory : MonoBehaviour
 
     void SetColour(Color color){
         if (PlayerColor == Color.clear){
-           renderer.color = Color.white; 
+            renderer.color = Color.white; 
         }
-        else{
+        else {
             renderer.color = PlayerColor;
         }
-        
     }
 
     public void SetType(TerritoryType type){
