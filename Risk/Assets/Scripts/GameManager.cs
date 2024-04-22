@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     // list of all players
     public List <Player> players = new List<Player>();
     // index of player currently taking their turn
-    public int currPlayers;
+    public int currPlayers = pCount;
     private int activePlayer;
     // territory manager
     public Territories territoryManager;
