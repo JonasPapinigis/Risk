@@ -15,7 +15,6 @@ public class Territory : MonoBehaviour
     private SpriteRenderer renderer;
     public Material defaultMaterial;    
     public int armies = 1;
-    public TerritoryType terr;
     public Player owner;
     public Color PlayerColor;
     public TMP_Text ArmyCounter;
@@ -60,16 +59,15 @@ public class Territory : MonoBehaviour
         }
     }
 
-    public void SetType(TerritoryType type){
-        terr = type;
-    }
-
     private void Awake()
     {
         armies = Random.Range(1, 4);
         ArmyCounter = GetComponent<TMP_Text>();
         ArmyCounter.text = armies.ToString();
          
+    }
+    public Player getOwner(){
+        return owner;
     }
 
 }
