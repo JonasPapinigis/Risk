@@ -30,10 +30,12 @@ public class GameManager : MonoBehaviour
     Timer turnTimer = new Timer(1000); // ms
     int timeElapsed = 0;
 
+    public PlayerManager playerManager;
     public void Start()
     {
         Debug.Log("Hello world!");
         territoryManager = Instantiate(territoryManager);
+        playerManager = Instantiate(playerManager);
         Debug.Log("Territory manager created!");
         // add an event hook to the timer
         turnTimer.Elapsed += async (sender, e) => await TurnTimerHandle();
@@ -215,11 +217,11 @@ public class GameManager : MonoBehaviour
     {
         // get the next player from the queue.
         Player plr = SelectTurn();
-        while (timerActive){
-            //Deploy until there are no troops or cancelled
-            //Attack until time runs our or cancelled
-            //Fortify once or until time runs out
-        }
+
+        /*
+            int troopsToDeploy = calcTroops(plr);
+
+        */
 
         yield return null;
     }
