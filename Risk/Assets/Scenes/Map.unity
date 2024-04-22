@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 19286693}
   - component: {fileID: 19286695}
   - component: {fileID: 19286694}
+  - component: {fileID: 19286696}
   m_Layer: 5
   m_Name: Ontario Counter
   m_TagString: Untagged
@@ -362,6 +363,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19286692}
   m_CullTransparentMesh: 1
+--- !u!114 &19286696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19286692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryType: 2
+  defaultMaterial: {fileID: 0}
+  armies: 1
+  terr: 2
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+  ArmyCounter: {fileID: 0}
 --- !u!1 &22819877
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,10 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 18
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 18
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &27506065
@@ -567,10 +586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 33
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 33
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &27506068
@@ -1356,6 +1375,7 @@ MonoBehaviour:
   P4TroopsPerTurn: {fileID: 92175445}
   P4Panel: {fileID: 890526843}
   gm: {fileID: 1817362288}
+  currPlayers: 0
 --- !u!4 &107058487
 Transform:
   m_ObjectHideFlags: 0
@@ -1654,10 +1674,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 6
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 6
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &176409259
@@ -1984,10 +2004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 9
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 9
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &200289886
@@ -2341,10 +2361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 4
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 4
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &241747326
@@ -3011,10 +3031,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 17
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 17
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &406520228
@@ -3241,10 +3261,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 21
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 21
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &449827458
@@ -3396,10 +3416,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 36
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 36
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &456424270
@@ -3654,10 +3674,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 7
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 7
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &506734177
@@ -4446,10 +4466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 20
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 20
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &649397607
@@ -4545,10 +4565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 12
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 12
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &658148129
@@ -5632,10 +5652,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 8
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 8
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &876472694
@@ -5968,10 +5988,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 38
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 38
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &953820017
@@ -6343,10 +6363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 34
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 34
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1025820475
@@ -6498,10 +6518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 14
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 14
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1048392258
@@ -6890,10 +6910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 10
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 10
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1099264544
@@ -7148,10 +7168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 35
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 35
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1117645492
@@ -7643,10 +7663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 29
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 29
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1158201669
@@ -8138,10 +8158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 11
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 11
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1239332404
@@ -8495,10 +8515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 5
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 5
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1296762857
@@ -8969,10 +8989,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 40
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 40
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1444447056
@@ -9025,10 +9045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 32
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 32
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1444447059
@@ -9248,10 +9268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 31
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 31
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1461246131
@@ -9403,10 +9423,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 26
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 26
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1503394016
@@ -9657,10 +9677,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 37
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 37
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1590547450
@@ -10036,10 +10056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 13
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 13
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1728759995
@@ -10393,10 +10413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 1
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 1
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1768135604
@@ -10737,7 +10757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38749ad7aaefcf747a1336d8812798ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currPlayers: 0
   territoryManager: {fileID: 1643408924}
   playerManager: {fileID: 0}
 --- !u!4 &1817362289
@@ -11110,10 +11129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 19
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 19
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1860922377
@@ -11166,10 +11185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 25
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 25
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1860922380
@@ -11523,10 +11542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 23
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 23
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1868124802
@@ -12388,10 +12407,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 16
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 16
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1977149884
@@ -12745,10 +12764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 39
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 39
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &1988712003
@@ -12801,10 +12820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 15
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 15
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &1988712006
@@ -13095,10 +13114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 41
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 41
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &2027093652
@@ -13250,10 +13269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 13
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 13
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &2028672238
@@ -13405,10 +13424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 3
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 3
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!1 &2055039104
@@ -13461,10 +13480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 30
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 30
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &2055039107
@@ -13616,10 +13635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 27
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 27
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &2091264517
@@ -13771,10 +13790,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 24
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 24
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &2133321224
@@ -13926,10 +13945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30074540352efd9449714cf7e5709fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  territoryType: 0
+  territoryType: 28
   defaultMaterial: {fileID: 0}
   armies: 1
-  terr: 0
+  terr: 28
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   ArmyCounter: {fileID: 0}
 --- !u!114 &2135109695
