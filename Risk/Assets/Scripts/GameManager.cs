@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Timers;
+using System.Threading;
 using System.Threading.Tasks;
 
 using UnityEngine;
@@ -11,6 +12,8 @@ using UnityEngine;
 // System.Random instead of UnityEngine.Random.
 // https://docs.unity3d.com/ScriptReference/Random.html
 using Random = System.Random;
+
+using Timer = System.Timers.Timer;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +33,6 @@ public class GameManager : MonoBehaviour
     Timer turnTimer = new Timer(1000); // ms
     int timeElapsed = 0;
 
-
     public void Start()
     {
         Debug.Log("Hello world!");
@@ -43,8 +45,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Initialising territories");
         InitialiseTerritories();
         Debug.Log("Starting game");
-        RunGame();
 
+        // Run the game loop as a separate task so we can ensure that the gamne
+        // loop does not block Unity's main thread.
+        Task.Run(RunGame);
     }
 
     public void Update()
@@ -68,10 +72,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Intialised terrirotirw");
         //return true; // TODO: return based on outcome?
     }
-    public bool RunGame(){
+    public Task RunGame(){
         Debug.Log("Running game!");
         bool running = true;
-        /*
+        
         while (running){
             // create the turn task
             Coroutine coro = StartCoroutine(turn());
@@ -89,8 +93,8 @@ public class GameManager : MonoBehaviour
             // on the next iteration we would fall through the loop and we
             // can run cleanup and exit tasks.
         }
-        */
-        return running;
+        
+        return Task.CompletedTask;
     }
 
     // increments the player index unless index == players.Count
