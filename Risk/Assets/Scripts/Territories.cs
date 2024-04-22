@@ -61,7 +61,11 @@ public enum TerritoryType: int
 public class Territories : MonoBehaviour
 {
     public static int nTerritories = 46;
+
     public GameObject territoryPrefab;
+
+    public Dictionary<TerritoryType, Territory> territories = new Dictionary<TerritoryType, Territory>();
+    
     public List<(Territory,Player)> ownerList;
     private Dictionary<TerritoryType,TerritoryType[]> adjacent = new Dictionary<TerritoryType,TerritoryType[]>(){
             {TerritoryType.ALASKA, new TerritoryType[] {TerritoryType.KAMCHATKA,TerritoryType.NORTHWEST_AMERICA,TerritoryType.ALBERTA }},
@@ -130,6 +134,13 @@ public class Territories : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var foundTerritories = FindObjectsOfType<Territory>();
+        for (int i=0; i<foundTerritories.Length; i++) {
+            // add the territory to the territory list.
+            territories[foundTerritories[i].territoryType] = foundTerritories[i];
+            Debug.Log("Found territory " + foundTerritories[i].territoryType);
+        }
+        Debug.Log("Found " + foundTerritories.Length + " territories.");
     }
 
     // Update is called once per frame
@@ -161,7 +172,7 @@ public class Territories : MonoBehaviour
             // Enqueue the player back to the end of the queue
             queue.Enqueue(playerUsed);
 
-            // Add the territory and its owner to the list
+            //Add the territory and its owner to the list
             ownerList.Add((territory, playerUsed));
         }
 
@@ -176,3 +187,4 @@ public class Territories : MonoBehaviour
         return colours[randomIndex];
     }
 }
+
