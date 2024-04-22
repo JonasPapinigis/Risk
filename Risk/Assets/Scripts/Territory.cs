@@ -52,7 +52,7 @@ public class Territory : MonoBehaviour
         renderer.material.color = PlayerColor;
     }
 
-    public void setType(TerritoryType type){
+    public void SetType(TerritoryType type){
         terr = type;
     }
 }

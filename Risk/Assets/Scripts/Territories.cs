@@ -142,11 +142,9 @@ public class Territories : MonoBehaviour
     {   
         ownerList = new List<(Territory,Player)>();
         Queue<Player> queue = new Queue<Player>(players);
-        foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType))){
-            Player playerUsed = queue.Dequeue();
-            Territory country = new Territory();
-            
-
+    
+        foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType)))
+        {
             // Dequeue a player from the queue to assign ownership
             Player playerUsed = queue.Dequeue();
         
@@ -155,8 +153,7 @@ public class Territories : MonoBehaviour
             Territory territory = territoryObject.GetComponent<Territory>();
 
             // Set the owner and type of the territory
-            territory.setOwner(playerUsed);
-            territory.setType(type);
+            territory.setOwner(playerUsed); // Adjusted method call here
 
             // Add some armies to the territory
             territory.armies += Random.Range(0, 3);
@@ -167,11 +164,11 @@ public class Territories : MonoBehaviour
             // Add the territory and its owner to the list
             ownerList.Add((territory, playerUsed));
         }
-        return (ownerList.Count ==System.Enum.GetValues(typeof(TerritoryType)).Length);
-           
-        
-        
+
+        return ownerList.Count == System.Enum.GetValues(typeof(TerritoryType)).Length;
     }
+
+
 
     UnityEngine.Color GetRandomColor()
     {
