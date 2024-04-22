@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public enum TerritoryColour : int
 {
@@ -158,7 +157,7 @@ public class Territories : MonoBehaviour
             Player playerUsed = queue.Dequeue();
             Territory territory = item.Value;
             territory.setOwner(playerUsed);
-            territory.armies += UnityEngine.Random.Range(1,3);
+            territory.armies += Random.Range(1,3);
             queue.Enqueue(playerUsed);
             ownerList.Add((territory, playerUsed));
 
@@ -170,62 +169,8 @@ public class Territories : MonoBehaviour
 
     UnityEngine.Color GetRandomColor()
     {
-        int randomIndex = UnityEngine.Random.Range(0, colours.Length);
+        int randomIndex = Random.Range(0, colours.Length);
         return colours[randomIndex];
-    }
-    
-    public List<string> ContinentCheck(Player p)
-{
-    List<string> continentsOwned = new List<string>();
-    
-
-    foreach (var continent in continents)
-    {
-        bool ownsAll = true; 
-        string continentName = continent.Key;
-        TerritoryType[] territoriesInContinent = continent.Value.Item1;
-
-        foreach (TerritoryType te in territoriesInContinent)
-        {
-            if (territories[te].getOwner() != p)
-            {
-                ownsAll = false;
-                break;
-            }
-        }
-
-        if (ownsAll)
-        {
-            continentsOwned.Add(continentName);
-        }
-    }
-
-    return continentsOwned;
-}
-
-    public int getContinentBonus(string continent){
-        switch (continent){
-
-            case ("s_america"):
-                return 2;
-            
-            case ("australia"):
-                return 2;
-
-            case ("n_america"):
-                return 5;
-
-            case ("europe"):
-                return 5;
-                
-            case ("africa"):
-                return 3;
-
-            case ("asia"):
-                return 7;
-        }
-    
-        throw new ArgumentException("Invalid Continent in Continent Bonus Check");
     }
 }
 
