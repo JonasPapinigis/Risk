@@ -157,7 +157,7 @@ public class Territories : MonoBehaviour
             Player playerUsed = queue.Dequeue();
             Territory territory = item.Value;
             territory.setOwner(playerUsed);
-            territory.armies = Random.Range(1,4);
+            territory.armies += Random.Range(1,3);
             queue.Enqueue(playerUsed);
             ownerList.Add((territory, playerUsed));
 
