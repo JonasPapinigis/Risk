@@ -141,22 +141,36 @@ public class Territories : MonoBehaviour
     public bool GenerateTerritories(List<Player> players)
     {   
         ownerList = new List<(Territory,Player)>();
-        Queue<Player> queue = new Queue<Player>();
+        Queue<Player> queue = new Queue<Player>(players);
         foreach (TerritoryType type in System.Enum.GetValues(typeof(TerritoryType))){
             Player playerUsed = queue.Dequeue();
             Territory country = new Territory();
             
 
-            country.setOwner(playerUsed);
-            country.setType(type);
-            country.armies += Random.Range(0, 3);
+            // Dequeue a player from the queue to assign ownership
+            Player playerUsed = queue.Dequeue();
+        
+            // Instantiate a new territory object from the prefab
+            GameObject territoryObject = Instantiate(territoryPrefab, transform.position, Quaternion.identity);
+            Territory territory = territoryObject.GetComponent<Territory>();
+
+            // Set the owner and type of the territory
+            territory.setOwner(playerUsed);
+            territory.setType(type);
+
+            // Add some armies to the territory
+            territory.armies += Random.Range(0, 3);
+
+            // Enqueue the player back to the end of the queue
             queue.Enqueue(playerUsed);
-            ownerList.Add((country,playerUsed));
+
+            // Add the territory and its owner to the list
+            ownerList.Add((territory, playerUsed));
         }
-        if (ownerList.Count ==System.Enum.GetValues(typeof(TerritoryType)).Length){
-            return true;
-        }
-        return false;
+        return (ownerList.Count ==System.Enum.GetValues(typeof(TerritoryType)).Length);
+           
+        
+        
     }
 
     UnityEngine.Color GetRandomColor()
