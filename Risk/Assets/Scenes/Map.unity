@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 92175446}
   - component: {fileID: 92175445}
   m_Layer: 5
-  m_Name: P1TroopsPerTurn
+  m_Name: P4TroopsPerTurn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1151,6 +1151,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &107058485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107058487}
+  - component: {fileID: 107058486}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &107058486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107058485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fa2b59e99250c44b98bf02af770b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1Name: {fileID: 580043359}
+  P1TotalTroops: {fileID: 1066541605}
+  P1TroopsPerTurn: {fileID: 1897100638}
+  P1Panel: {fileID: 406520229}
+  P2Name: {fileID: 330245506}
+  P2TotalTroops: {fileID: 792112261}
+  P2TroopsPerTurn: {fileID: 127095255}
+  P2Panel: {fileID: 1379110803}
+  P3Name: {fileID: 1180263238}
+  P3TotalTroops: {fileID: 817042234}
+  P3TroopsPerTurn: {fileID: 659779290}
+  P3Panel: {fileID: 920899030}
+  P4Name: {fileID: 176409261}
+  P4TotalTroops: {fileID: 1147429264}
+  P4TroopsPerTurn: {fileID: 92175445}
+  P4Panel: {fileID: 890526843}
+--- !u!4 &107058487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107058485}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 272.27414, y: 162.41254, z: -6.0114775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &127095253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1223,7 @@ GameObject:
   - component: {fileID: 127095256}
   - component: {fileID: 127095255}
   m_Layer: 5
-  m_Name: P1TroopsPerTurn
+  m_Name: P2TroopsPerTurn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1493,7 @@ GameObject:
   - component: {fileID: 176409262}
   - component: {fileID: 176409261}
   m_Layer: 5
-  m_Name: P1Name
+  m_Name: P4Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,7 +2146,7 @@ GameObject:
   - component: {fileID: 330245507}
   - component: {fileID: 330245506}
   m_Layer: 5
-  m_Name: P1Name
+  m_Name: P2Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3945,7 +4005,7 @@ GameObject:
   - component: {fileID: 659779291}
   - component: {fileID: 659779290}
   m_Layer: 5
-  m_Name: P1TroopsPerTurn
+  m_Name: P3TroopsPerTurn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4427,7 +4487,7 @@ GameObject:
   - component: {fileID: 792112262}
   - component: {fileID: 792112261}
   m_Layer: 5
-  m_Name: P1TotalTroops
+  m_Name: P2TotalTroops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4601,7 +4661,7 @@ GameObject:
   - component: {fileID: 817042235}
   - component: {fileID: 817042234}
   m_Layer: 5
-  m_Name: P1TotalTroops
+  m_Name: P3TotalTroops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4902,7 +4962,7 @@ GameObject:
   - component: {fileID: 890526845}
   - component: {fileID: 890526844}
   m_Layer: 5
-  m_Name: P1Panel
+  m_Name: P4Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4977,7 +5037,7 @@ GameObject:
   - component: {fileID: 920899032}
   - component: {fileID: 920899031}
   m_Layer: 5
-  m_Name: P1Panel
+  m_Name: P3Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5915,7 +5975,7 @@ GameObject:
   - component: {fileID: 1147429265}
   - component: {fileID: 1147429264}
   m_Layer: 5
-  m_Name: P1TotalTroops
+  m_Name: P4TotalTroops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6152,7 +6212,7 @@ GameObject:
   - component: {fileID: 1180263239}
   - component: {fileID: 1180263238}
   m_Layer: 5
-  m_Name: P1Name
+  m_Name: P3Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6872,7 +6932,7 @@ GameObject:
   - component: {fileID: 1379110805}
   - component: {fileID: 1379110804}
   m_Layer: 5
-  m_Name: P1Panel
+  m_Name: P2Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10366,3 +10426,4 @@ SceneRoots:
   - {fileID: 1817362289}
   - {fileID: 876472695}
   - {fileID: 1868124806}
+  - {fileID: 107058487}
