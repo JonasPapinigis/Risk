@@ -48,7 +48,13 @@ public class Territory : MonoBehaviour
     }
 
     void SetColour(Color color){
-        renderer.color = PlayerColor;
+        if (PlayerColor == Color.clear){
+           renderer.color = Color.white; 
+        }
+        else{
+            renderer.color = PlayerColor;
+        }
+        
     }
 
     public void SetType(TerritoryType type){
