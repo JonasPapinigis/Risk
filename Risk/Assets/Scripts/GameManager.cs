@@ -22,8 +22,7 @@ public class GameManager : MonoBehaviour
     // territory manager
     public Territories territoryManager;
     private bool gameOver;
-    private bool timerActive;
-    private float timer = 0.0f;
+    private bool timerActive; private float timer = 0.0f;
     private bool nextPressed;
 
     // timer stuff  
@@ -33,14 +32,11 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        territoryManager = Instantiate(territoryManager);
+        territoryManager = new Territories();
         // add an event hook to the timer
         turnTimer.Elapsed += async (sender, e) => await TurnTimerHandle();
-        Debug.Log("Adding players");
-        AddPlayers(3);
-        Debug.Log("Initialising territories");
+        AddPlayers(currPlayers);
         InitialiseTerritories();
-        Debug.Log("Starting game");
         RunGame();
 
     }
@@ -65,7 +61,6 @@ public class GameManager : MonoBehaviour
         return true; // TODO: return based on outcome?
     }
     public bool RunGame(){
-        Debug.Log("Running game!");
         bool running = true;
         while (running){
             // create the turn task
