@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class PlayerManager : MonoBehaviour
         foreach (string cont in ownedConts){
             nextTurn += gm.territoryManager.getContinentBonus(cont);
         }
-        nextTurn += ownedConts / 3;
+        nextTurn += ownedConts.Count / 3;
         return nextTurn;
 
     }
@@ -67,10 +68,15 @@ public class PlayerManager : MonoBehaviour
             switch (players.Count){
                 case (2):
                     p.setArmies(40);
+                    break;
                 case (3):
                     p.setArmies(35);
+                    break;
                 case (4):
                     p.setArmies(30);
+                    break;
+                case (_):
+                    throw new ArgumentException("Invalid number of players");
             }
         }
     }
@@ -83,40 +89,56 @@ public class PlayerManager : MonoBehaviour
         switch (currPlayers){
             case (4):
                 //Set colours
-                P1TotalTroops = calcTroopsNextTurn(players[0]);
-                P2TotalTroops = calcTroopsNextTurn(players[1]);
-                P3TotalTroops = calcTroopsNextTurn(players[2]);
-                P4TotalTroops = calcTroopsNextTurn(players[3]);
+                P1TroopsPerTurn.text = calcTroopsNextTurn(players[0]).ToString();
+                P2TroopsPerTurn.text = calcTroopsNextTurn(players[1]).ToString();
+                P3TroopsPerTurn.text = calcTroopsNextTurn(players[2]).ToString();
+                P4TroopsPerTurn.text = calcTroopsNextTurn(players[3]).ToString();
 
-                P1TotalTroops = players[0].getArmies();
-                P2TotalTroops = players[1].getArmies();
-                P3TotalTroops = players[2].getArmies();
-                P4TotalTroops = players[3].getArmies();
-
-                
+                P1TotalTroops.text = players[0].getArmies().ToString();
+                P2TotalTroops.text = players[1].getArmies().ToString();
+                P3TotalTroops.text = players[2].getArmies().ToString();
+                P4TotalTroops.text = players[3].getArmies().ToString();
+                break;
 
             case (3):
                 //Hide P4 Elements
-                P4Name.setActive(false); P4Panel.setActive(false); P4TotalTroops.setActive(false); P4TroopsPerTurn.setActive(false);
+                changeTxtVisi(P4Name,false); P4Panel.localScale = new Vector3(0,0); changeTxtVisi(P4TotalTroops,false); changeTxtVisi(P4TroopsPerTurn,false);
                 //Set colours
-                P1TotalTroops = calcTroopsNextTurn(players[0]);
-                P2TotalTroops = calcTroopsNextTurn(players[1]);
-                P3TotalTroops = calcTroopsNextTurn(players[2]);
+                P1TroopsPerTurn.text = calcTroopsNextTurn(players[0]).ToString();
+                P2TroopsPerTurn.text = calcTroopsNextTurn(players[1]).ToString();
+                P3TroopsPerTurn.text = calcTroopsNextTurn(players[2]).ToString();
 
-                P1TotalTroops = players[0].getArmies();
-                P2TotalTroops = players[1].getArmies();
-                P3TotalTroops = players[2].getArmies();
+                P1TotalTroops.text = players[0].getArmies().ToString();
+                P2TotalTroops.text = players[1].getArmies().ToString();
+                P3TotalTroops.text = players[2].getArmies().ToString();
+                break;
             case (2):
                 //Set colours
-                P4Name.setActive(false); P4Panel.setActive(false); P4TotalTroops.setActive(false); P4TroopsPerTurn.setActive(false);
-                P3Name.setActive(false); P3Panel.setActive(false); P3TotalTroops.setActive(false); P3TroopsPerTurn.setActive(false);
+                changeTxtVisi(P4Name,false); P4Panel.localScale = new Vector3(0,0); changeTxtVisi(P4TotalTroops,false); changeTxtVisi(P4TroopsPerTurn,false);
+                changeTxtVisi(P3Name,false); P3Panel.localScale = new Vector3(0,0); changeTxtVisi(P3TotalTroops,false); changeTxtVisi(P3TroopsPerTurn,false);
                 //Set colours
-                P1TotalTroops = calcTroopsNextTurn(players[0]);
-                P2TotalTroops = calcTroopsNextTurn(players[1]);
+                P1TroopsPerTurn.text = calcTroopsNextTurn(players[0]).ToString();
+                P2TroopsPerTurn.text = calcTroopsNextTurn(players[1]).ToString();
 
-                P1TotalTroops = players[0].getArmies();
-                P2TotalTroops = players[1].getArmies();
+                P1TotalTroops.text = players[0].getArmies().ToString();
+                P2TotalTroops.text = players[1].getArmies().ToString();
+                break;
         }
+
+        
+    }
+    private void changeEleInt(TextMeshProUGUI element,int i){
+        element.text = i.ToString();
+    }
+    private void changeTxtVisi(TextMeshProUGUI text, bool vis){
+        Color c = text.color;
+        if (vis){
+            c.a = 1;
+        }
+        else{
+            c.a = 0;
+        }
+        text.color = c;
     }
 
 }

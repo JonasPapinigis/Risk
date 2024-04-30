@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum TerritoryColour : int
 {
@@ -61,6 +62,7 @@ public enum TerritoryType: int
 public class Territories : MonoBehaviour
 {
     public static int nTerritories = 46;
+
 
     public Dictionary<TerritoryType, Territory> territories = new Dictionary<TerritoryType, Territory>();
     
@@ -149,14 +151,14 @@ public class Territories : MonoBehaviour
         }
         Debug.Log("Found " + foundTerritories.Length + " territories.");
 
-        ownerList = new List<(Territory,Player)>();
+        List<(Territory,Player)> ownerList = new List<(Territory,Player)>();
         Queue<Player> queue = new Queue<Player>(players);
 
         foreach (var item in territories) {
             Player playerUsed = queue.Dequeue();
             Territory territory = item.Value;
             territory.setOwner(playerUsed);
-            territory.armies = Random.Range(1,4);
+            territory.armies = UnityEngine.Random.Range(1,4);
             queue.Enqueue(playerUsed);
             ownerList.Add((territory, playerUsed));
 
@@ -166,9 +168,10 @@ public class Territories : MonoBehaviour
 
 
 
-    UnityEngine.Color GetRandomColor()
+    public UnityEngine.Color GetRandomColor()
     {
-        int randomIndex = Random.Range(0, colours.Length);
+
+        int randomIndex = UnityEngine.Random.Range(0, colours.Length);
         return colours[randomIndex];
     }
 
@@ -224,8 +227,8 @@ public class Territories : MonoBehaviour
 
     public int getTerritoryCount(Player p){
         int totalTerr = 0;
-        foreach (Territory t in territories.Value.Item1){
-            if (t.getOwner() == p){
+        foreach (KeyValuePair<TerritoryType, Territory> entry in territories){
+            if (entry.Value.getOwner() == p){
                 totalTerr++;
             }
         }
