@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 /*
  * This class manages the colour of each individual territory.
  *
  * cubeRenderer - a reference to 
  */
-public class Territory : MonoBehaviour
+public class Territory : MonoBehaviour  , IPointerEnterHandler, IPointerExitHandler//,IPointerClickHandler
 {   
     public TerritoryType territoryType;
     private SpriteRenderer renderer;
@@ -46,6 +47,26 @@ public class Territory : MonoBehaviour
             renderer = gameObject.AddComponent<SpriteRenderer>();
             renderer.material = defaultMaterial; // Corrected reference to renderer
         }
+    }
+
+    void isHovered(bool hovered){
+
+        Color color = renderer.material.color;
+        if (hovered){
+        color += new Color(0.1f,0.1f,0.1f,0.1f);
+        }
+        else{
+            color -= new Color(0.1f,0.1f,0.1f,0.1f);
+        }
+        renderer.material.color = color;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData){
+        isHovered(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData){
+        isHovered(false);
     }
 
     public void setOwner(Player player){

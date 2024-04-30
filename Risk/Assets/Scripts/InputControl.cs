@@ -9,13 +9,15 @@ using TMPro;
 public class InputControl : MonoBehaviour
 {   
     public UnityEngine.UI.Button startButton;
+    public UnityEngine.UI.Button confirmButton;
+    public UnityEngine.UI.Button nextPhaseButton;
+    public TMP_InputField generalInputField;
     public TMP_Dropdown playerPicker;
     // Start is called before the first frame update
     void Start()
     {
 
-        startButton.onClick.AddListener(()=>PressedFunction());
-        DontDestroyOnLoad(this);
+        startButton.onClick.AddListener(()=>StartPressedFunction());
         
     }
 
@@ -30,7 +32,7 @@ public class InputControl : MonoBehaviour
         GameData.pCount = selectedIndex + 2;
     }
 
-    private void PressedFunction(){
+    private void StartPressedFunction(){
         Debug.Log("Button Pressed");
         SetDropdownValue();
         Debug.Log("Current Players: "+GameData.pCount);
