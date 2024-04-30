@@ -24,8 +24,7 @@ public class Territory : MonoBehaviour
     void Start()
     {
         EnsureSpriteRenderer();
-        SetColour(PlayerColor);
-        
+        //SetColour(PlayerColor);
     }
 
     // Update is called once per frame
@@ -53,11 +52,14 @@ public class Territory : MonoBehaviour
         owner = player; 
     }
 
-    void SetColour(Color color){
+    public void SetColour(UnityEngine.Color color){
+        EnsureSpriteRenderer();
+        
+        PlayerColor = color;
         if (PlayerColor == Color.clear){
             renderer.color = Color.white;
             Debug.Log("" + PlayerColor);
-            SetColour(PlayerColor);
+            //SetColour(PlayerColor);
             
         }
         else {

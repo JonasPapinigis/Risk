@@ -153,14 +153,17 @@ public class Territories : MonoBehaviour
 
         List<(Territory,Player)> ownerList = new List<(Territory,Player)>();
         Queue<Player> queue = new Queue<Player>(players);
+        Debug.Log(players.Count);
+        Debug.Log(queue.Count);
 
         foreach (var item in territories) {
             Player playerUsed = queue.Dequeue();
             Territory territory = item.Value;
             territory.setOwner(playerUsed);
             territory.armies = UnityEngine.Random.Range(1,4);
-            queue.Enqueue(playerUsed);
             ownerList.Add((territory, playerUsed));
+            territory.SetColour(colours[(int) playerUsed.colour]);
+            queue.Enqueue(playerUsed);
 
             Debug.Log("Territory " + territory.territoryType + " got " + territory.armies + " armies.");
         }
