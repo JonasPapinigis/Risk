@@ -25,6 +25,7 @@ public class Territory : MonoBehaviour
     {
         EnsureSpriteRenderer();
         SetColour(PlayerColor);
+        
     }
 
     // Update is called once per frame
@@ -54,10 +55,14 @@ public class Territory : MonoBehaviour
 
     void SetColour(Color color){
         if (PlayerColor == Color.clear){
-            renderer.color = Color.white; 
+            renderer.color = Color.white;
+            Debug.Log("" + PlayerColor);
+            SetColour(PlayerColor);
+            
         }
         else {
             renderer.color = PlayerColor;
+            
         }
     }
 
