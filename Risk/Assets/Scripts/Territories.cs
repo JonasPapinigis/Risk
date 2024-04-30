@@ -141,9 +141,25 @@ public class Territories : MonoBehaviour
         
     }
 
+    Territory[] ReshuffleTerritories(Territory[] territories)
+    {
+        // knuth shuffle algorithm
+        for (int t = 0; t < territories.Length; t++ )
+        {
+            Territory tmp = territories[t];
+            int r = UnityEngine.Random.Range(t, territories.Length);
+            territories[t] = territories[r];
+            territories[r] = tmp;
+        }
+
+        return territories;
+    }
+
     public void GenerateTerritories(List<Player> players)
     {   
         var foundTerritories = FindObjectsOfType<Territory>();
+        foundTerritories = ReshuffleTerritories(foundTerritories);
+
         for (int i=0; i<foundTerritories.Length; i++) {
             // add the territory to the territory list.
             territories[foundTerritories[i].territoryType] = foundTerritories[i];
