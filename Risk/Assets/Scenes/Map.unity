@@ -3922,7 +3922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506.00864, y: -28.035767}
+  m_AnchoredPosition: {x: -501, y: -101.07153}
   m_SizeDelta: {x: 541.9827, y: 165.31155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &579719523
@@ -5046,7 +5046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506.00864, y: -319.96423}
+  m_AnchoredPosition: {x: -501, y: -393}
   m_SizeDelta: {x: 541.9827, y: 165.31155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &750184032
@@ -5667,6 +5667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 876472695}
+  - component: {fileID: 876472696}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -5689,6 +5690,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876472696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876472694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27e60bac1ca42b4fb4e2f776c64dfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
+  playerPicker: {fileID: 0}
 --- !u!1 &890526842
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,7 +6045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506.00864, y: -223}
+  m_AnchoredPosition: {x: -501, y: -296.03577}
   m_SizeDelta: {x: 541.9827, y: 165.31155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &978298479
@@ -6104,7 +6119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506.00864, y: -125}
+  m_AnchoredPosition: {x: -501, y: -198.03577}
   m_SizeDelta: {x: 541.9827, y: 165.31155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1021200373
@@ -10758,7 +10773,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   territoryManager: {fileID: 1643408924}
-  playerManager: {fileID: 0}
+  inputManager: {fileID: 876472696}
+  playerManager: {fileID: 107058486}
 --- !u!4 &1817362289
 Transform:
   m_ObjectHideFlags: 0

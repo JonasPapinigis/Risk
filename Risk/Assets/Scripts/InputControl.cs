@@ -6,15 +6,17 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class InputManager : MonoBehaviour
+public class InputControl : MonoBehaviour
 {   
     public UnityEngine.UI.Button startButton;
     public TMP_Dropdown playerPicker;
-    public static int pCount;
     // Start is called before the first frame update
     void Start()
-    {       
+    {
+
         startButton.onClick.AddListener(()=>PressedFunction());
+        DontDestroyOnLoad(this);
+        
     }
 
     // Update is called once per frame
@@ -22,17 +24,16 @@ public class InputManager : MonoBehaviour
     {
         
     }
-    public int SetDropdownValue()
+    public void SetDropdownValue()
     {
         int selectedIndex = playerPicker.value;
-        pCount = selectedIndex + 2;
-        return pCount;
+        GameData.pCount = selectedIndex + 2;
     }
 
     private void PressedFunction(){
         Debug.Log("Button Pressed");
         SetDropdownValue();
-        Debug.Log("Current Players: "+pCount);
+        Debug.Log("Current Players: "+GameData.pCount);
         SceneManager.LoadScene("Map");
     }
 }

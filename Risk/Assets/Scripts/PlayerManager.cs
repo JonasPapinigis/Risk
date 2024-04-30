@@ -12,13 +12,18 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI P4Name; public TextMeshProUGUI P4TotalTroops; public TextMeshProUGUI P4TroopsPerTurn; public RectTransform P4Panel;
     public GameManager gm;
     private int activePlayer = -1;
-    public int currPlayers = InputManager.pCount;
+    private InputControl IC;
+    public int currPlayers;
     public List <Player> players = new List<Player>();
 
 
     void Start()
     {
 
+    }
+
+    void Awake(){
+        currPlayers = GameData.pCount;
     }
 
     // Update is called once per frame

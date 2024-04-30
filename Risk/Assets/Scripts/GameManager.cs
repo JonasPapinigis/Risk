@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public PlayerManager playerManager;
     public void Start()
     {
+        
         Debug.Log("Hello world!");
         territoryManager = Instantiate(territoryManager);
         playerManager = Instantiate(playerManager);
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
     }
 
     public (bool success, int attLoss, int defLoss) Attack(Territory attacker, Territory defender, int nDieA, int nDieD){
-     /**bool: return True is attack successfull, False otherwise
+        /**bool: return True is attack successfull, False otherwise
         int: returns num of troops subtracted from attacker
         int: return num of troop subtracted from defender
 
