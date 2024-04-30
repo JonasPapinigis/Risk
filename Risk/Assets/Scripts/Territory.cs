@@ -57,12 +57,14 @@ public class Territory : MonoBehaviour
         
         PlayerColor = color;
         if (PlayerColor == Color.clear){
+            Debug.Log("Invalid player colour, setting to white.");
             renderer.color = Color.white;
             Debug.Log("" + PlayerColor);
             //SetColour(PlayerColor);
             
         }
         else {
+            Debug.Log("Set " + territoryType + " to " + PlayerColor);
             renderer.color = PlayerColor;
             
         }

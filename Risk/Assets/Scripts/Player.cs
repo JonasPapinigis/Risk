@@ -17,6 +17,8 @@ public class Player
 
     public string Name { get; set; }
     public PlayerColor colour { get; set; }
+
+    public int id;
     
     private List<Territory> territories = new List<Territory>();
     private List<PlayingCard> cards = new List<PlayingCard>();
@@ -25,7 +27,7 @@ public class Player
     private int ownedInfantries; // Tracks the number of infantry units owned
     private PlayingCard[] ownedPlayingCards; // Existing Unity-based property for playing cards
 
-    public Player(string name="", PlayerColor colour=PlayerColor.Red)
+    public Player(string name="", PlayerColor colour=PlayerColor.Red, int id=0)
     {
         Name = name;
         colour = colour;

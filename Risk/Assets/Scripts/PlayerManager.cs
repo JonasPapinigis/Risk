@@ -61,12 +61,12 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
-        for (int i=0; i<currPlayers; i++) {
+        for (int i=0; i<GameData.pCount; i++) {
             // get the color based on the player index.
             // e.g. i=0 means color=Color.Red
             PlayerColor color = (PlayerColor)i;
 
-            players.Add(new Player("", color));
+            players.Add(new Player("", color, i));
         }
         foreach (Player p in players){
             switch (players.Count){
