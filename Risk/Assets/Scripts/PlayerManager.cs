@@ -12,7 +12,6 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI P4Name; public TextMeshProUGUI P4TotalTroops; public TextMeshProUGUI P4TroopsPerTurn; public RectTransform P4Panel;
     public GameManager gm;
     private int activePlayer = -1;
-    private InputControl IC;
     public int currPlayers;
     public List <Player> players = new List<Player>();
 
@@ -94,6 +93,7 @@ public class PlayerManager : MonoBehaviour
         switch (currPlayers){
             case (4):
                 //Set colours
+                Debug.Log("Player Count 4");
                 P1TroopsPerTurn.text = calcTroopsNextTurn(players[0]).ToString();
                 P2TroopsPerTurn.text = calcTroopsNextTurn(players[1]).ToString();
                 P3TroopsPerTurn.text = calcTroopsNextTurn(players[2]).ToString();
@@ -107,6 +107,7 @@ public class PlayerManager : MonoBehaviour
 
             case (3):
                 //Hide P4 Elements
+                Debug.Log("Player Count 3");
                 changeTxtVisi(P4Name,false); P4Panel.localScale = new Vector3(0,0); changeTxtVisi(P4TotalTroops,false); changeTxtVisi(P4TroopsPerTurn,false);
                 //Set colours
                 P1TroopsPerTurn.text = calcTroopsNextTurn(players[0]).ToString();
@@ -119,6 +120,7 @@ public class PlayerManager : MonoBehaviour
                 break;
             case (2):
                 //Set colours
+                Debug.Log("Player Count 2");
                 changeTxtVisi(P4Name,false); P4Panel.localScale = new Vector3(0,0); changeTxtVisi(P4TotalTroops,false); changeTxtVisi(P4TroopsPerTurn,false);
                 changeTxtVisi(P3Name,false); P3Panel.localScale = new Vector3(0,0); changeTxtVisi(P3TotalTroops,false); changeTxtVisi(P3TroopsPerTurn,false);
                 //Set colours
