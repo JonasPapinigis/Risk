@@ -49,7 +49,7 @@ public class Territory : MonoBehaviour  , IPointerEnterHandler, IPointerExitHand
         }
     }
 
-    void isHovered(bool hovered){
+    public void isHovered(bool hovered){
 
         Color color = renderer.material.color;
         if (hovered){
@@ -92,7 +92,7 @@ public class Territory : MonoBehaviour  , IPointerEnterHandler, IPointerExitHand
     }
 
     public void SetType(TerritoryType type){
-        terr = type;
+        territoryType = type;
     }
 
     private void Awake()
