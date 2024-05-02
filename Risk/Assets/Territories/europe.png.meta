@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,175 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: europe_0
-      rect:
-        serializedVersion: 2
-        x: 562
-        y: 902
-        width: 158
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cdf3de9e03676c4da028606d1323bc6
-      internalID: 385267595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_1
-      rect:
-        serializedVersion: 2
-        x: 1427
-        y: 494
-        width: 438
-        height: 559
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4299907f0d2f0f841ae7def317187c00
-      internalID: 298958944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_2
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 566
-        width: 80
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61523d43d4799714a869c90e2f49ba10
-      internalID: -491791253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_3
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 537
-        width: 214
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72a9441fd378b404cb9ff7abffadeb70
-      internalID: -464363659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_4
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 480
-        width: 270
-        height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 195b5b6fa9571cd46872df8e629723f7
-      internalID: 1248079199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_5
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 272
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89eaa5a645f14fe40885a59356804dbc
-      internalID: -1008982231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_6
-      rect:
-        serializedVersion: 2
-        x: 1067
-        y: 88
-        width: 230
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cff426aadd515f409d1e99b120d10d4
-      internalID: -1652478498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: europe_7
-      rect:
-        serializedVersion: 2
-        x: 1532
-        y: 60
-        width: 270
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f563b6a6d475ae439891e432f1f0574
-      internalID: -665818434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -287,15 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      europe_0: 385267595
-      europe_1: 298958944
-      europe_2: -491791253
-      europe_3: -464363659
-      europe_4: 1248079199
-      europe_5: -1008982231
-      europe_6: -1652478498
-      europe_7: -665818434
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
